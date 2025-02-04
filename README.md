@@ -9,7 +9,9 @@ The GIS Viewer Application is a React-based project designed to load, view, and 
 - Interactive map viewer for exploring geographic information
 - Sunlight simulation with adjustable time settings
 - Layer settings for toggling visibility, changing variables, and colormaps
-- Export maps as images
+
+
+![alt text](image.png)
 
 ## Project Structure
 ```
