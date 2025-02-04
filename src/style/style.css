@@ -1,0 +1,307 @@
+:root {
+  /* Colors */
+  --color-background: #f8f9fa;
+  --color-text: #212529;
+
+  /* Typography */
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  --font-family-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+
+  /* Drawer theme colors */
+  --drawer-background: #343a40;
+  --drawer-text: #f8f9fa;
+  --drawer-divider: #495057;
+  --drawer-content-bg: #3c4043;
+
+  /* Base colors */
+  --primary-light: #17a2b8;
+  --primary-dark: #138496;
+  --secondary-light: #28a745;
+  --secondary-dark: #218838;
+  
+  /* Background colors */
+  --bg-light: #f8f9fa;
+  --bg-dark: #343a40;
+  --bg-light-secondary: #e9ecef;
+  --bg-dark-secondary: #495057;
+  
+  /* Text colors */
+  --text-light: #212529;
+  --text-dark: #f8f9fa;
+  --text-light-secondary: #6c757d;
+  --text-dark-secondary: #ced4da;
+  
+  /* Border colors */
+  --border-light: #dee2e6;
+  --border-dark: #6c757d;
+  
+  /* Font family */
+  --font-family: 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+  
+  /* Tab theme colors */
+  --tab-text: #343a40;
+  --tab-bg: #f8f9fa;
+  --tab-border: #ced4da;
+  --tab-button-bg: #138496;
+  --tab-button-text: #f8f9fa;
+
+  /* Accent colors */
+  --accent-primary: #17a2b8;
+  --accent-secondary: #28a745;
+  --accent-hover: #138496;
+  --accent-active: #117a8b;
+  --accent-disabled: #a9d6e5;
+  
+  /* Component colors */
+  --slider-color: var(--accent-primary);
+  --switch-color: var(--accent-primary);
+  --button-primary: var(--accent-primary);
+  --button-text-primary: #ffffff;
+  --upload-border: var(--accent-primary);
+  --icon-active: var(--accent-secondary);
+
+  /* Theme switching */
+  &[data-theme="dark"] {
+    --bg-light: var(--bg-dark);
+    --bg-light-secondary: var(--bg-dark-secondary);
+    --text-light: var(--text-dark);
+    --text-light-secondary: var(--text-dark-secondary);
+    --border-light: var(--border-dark);
+    --drawer-background: var(--bg-dark-secondary);
+    --drawer-text: var(--text-dark);
+    --drawer-divider: var(--border-dark);
+    --drawer-content-bg: var(--bg-dark);
+    --button-bg: #495057;
+    --button-text: #f8f9fa;
+    --button-hover: #6c757d;
+    --tab-text: #f8f9fa;
+    --tab-bg: #343a40;
+    --tab-border: #495057;
+    --tab-button-bg: #138496;
+    --tab-button-text: #f8f9fa;
+
+    --accent-primary: #a9d6e5;
+    --accent-secondary: #81c784;
+    --accent-hover: #64b5f6;
+    --accent-active: #42a5f5;
+    --accent-disabled: #42a5f5;
+  }
+
+  &[data-theme="light"] {
+    --drawer-background: var(--bg-light-secondary);
+    --drawer-text: var(--text-light);
+    --drawer-divider: var(--border-light);
+    --drawer-content-bg: var(--bg-light);
+    --button-bg: white;
+    --button-text: #6c757d;
+    --button-hover: #e9ecef;
+    --tab-text: #343a40;
+    --tab-bg: #f8f9fa;
+    --tab-border: #ced4da;
+    --tab-button-bg: #138496;
+    --tab-button-text: #f8f9fa;
+  }
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+code {
+  font-family: var(--font-family-code);
+}
+
+/* Layout */
+#app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Use these variables for all other elements */
+.button {
+  background-color: var(--primary-light);
+  color: var(--text-dark);
+}
+
+.sidebar {
+  background-color: var(--bg-light-secondary);
+  border: 1px solid var(--border-light);
+}
+
+.header {
+  background-color: var(--primary-dark);
+  color: var(--text-dark);
+}
+
+/* Toggle Map Button - Updated styling */
+.toggle-map-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--button-bg);
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+}
+
+.toggle-map-btn i {
+    color: var(--button-text);
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.toggle-map-btn:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    background-color: var(--button-hover);
+}
+
+.toggle-map-btn:active {
+    transform: translateY(1px);
+}
+
+/* Dark mode styles for map toggle */
+[data-theme="dark"] .toggle-map-btn {
+    background-color: var(--button-bg);
+}
+
+[data-theme="dark"] .toggle-map-btn i {
+    color: var(--button-text);
+}
+
+/* Active state for map toggle */
+.toggle-map-btn.active {
+    border: none;
+    background-color: #e0e0e0;
+}
+
+.toggle-map-btn.active i {
+    color: #333;
+}
+
+[data-theme="dark"] .toggle-map-btn.active {
+    background-color: #333;
+    border: none;
+}
+
+[data-theme="dark"] .toggle-map-btn.active i {
+    color: #fff;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    position: absolute;
+    top: 70px;  /* Position it below map toggle */
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--button-bg);
+    border: 2px solid transparent;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+}
+
+.theme-toggle-btn:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    background-color: var(--button-hover);
+}
+
+.theme-toggle-btn:active {
+    transform: translateY(1px);
+}
+
+.theme-toggle-btn i {
+    color: var(--button-text);
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .theme-toggle-btn {
+    background-color: var(--button-bg);
+}
+
+[data-theme="dark"] .theme-toggle-btn i {
+    color: var(--button-text);
+}
+
+/* Right drawer */
+
+.drawer-paper {
+  width: 350px;
+  padding: 16px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--drawer-background);
+  color: var(--drawer-text);
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  color: var(--drawer-text);
+  border-bottom: 1px solid var(--drawer-divider);
+}
+
+.chevron {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1300;
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+  right: 0; /* Ensure chevron is visible */
+}
+
+.chevron:hover {
+  background-color: var(--button-hover);
+}
+
+.chevron-open {
+  right: 350px;
+}
+
+.content {
+  padding: 16px;
+  color: var(--drawer-text);
+}
+
+.chart-container, .stat-card, .chart-card {
+  margin-bottom: 16px;
+  background-color: var(--drawer-content-bg);
+  border: 1px solid var(--drawer-divider);
+  border-radius: 8px;
+  padding: 16px;
+  color: var(--drawer-text);
+}
