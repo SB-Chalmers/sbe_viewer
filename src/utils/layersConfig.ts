@@ -7,12 +7,10 @@ import { getColorFromValue, getColormapForVariable } from './colormapHelpers';
 import { GLTFLoader, postProcessGLTF } from '@loaders.gl/gltf';
 import { load } from '@loaders.gl/core';
 import { SimpleMeshLayer } from '@deck.gl/mesh-layers';
-import { registerLoaders } from '@loaders.gl/core';
-import { CubeGeometry } from '@luma.gl/engine';
+import { CubeGeometry, Geometry } from '@luma.gl/engine';
 import { hbjsonToGLB } from './hbjsonHelpers';
 
-// Register the GLTF loader
-registerLoaders([GLTFLoader]);
+
 
 const generateBoundingBox = (data: any): Feature<Polygon> => {
   const coordinates = data.features.flatMap((feature: any) => feature.geometry.coordinates.flat());
@@ -236,48 +234,34 @@ const saveGLBToServer = async (glbBuffer: ArrayBuffer, url: string): Promise<str
   }
 };
 
+
 /**
 * Generates a ScenegraphLayer using a specified GLB file.
 */
 const generateHBJSONScenegraphLayer = async (position: [number, number, number], filePath: string) => {
-
   const id: string = 'hbjson-glb-layer';
   const data: any = [{ position }]; // Ensure data follows the expected format
   const scenegraph : string = filePath; // can change to filePath after testing
-
+  const gltf = await load(scenegraph, GLTFLoader);
+  console.log('GLTF loaded:', gltf);
   const layer = new ScenegraphLayer({
       id,
       data,
       scenegraph,
-
-      // Ensure Deck.gl receives [longitude, latitude] format
       getPosition: (d: any) => d.position || [11.9690435, 57.7068985, 0],
-
-      // Keep orientation fixed
       getOrientation: (d: any) => [0, 0, 0],
-
-      // Keep scale fixed
       getScale: (d: any) => [1, 1, 1],
-
-      sizeScale: 10, // Base scaling factor
-
-      // Enable picking interactions
+      sizeScale: 1, // Base scaling factor
       pickable: true,
-
-      // Default color for visibility
-      getColor: [255, 255, 255, 255],
-      
-      // Use PBR lighting model for better rendering
       _lighting: 'pbr',
-
       onError: (error: any) => {
           console.error('Error loading HBJSON:', error);
       }
   });
-
   console.log('HBJSON Layer created:', layer);
   return layer;
 };
+
 
 
 export const createLayers = async (gisData: any, treeData: any, handleLayerClick: (info: any) => void, sunlightTime: number, colorBy: string) => {
