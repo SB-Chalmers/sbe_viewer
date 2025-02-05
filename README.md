@@ -81,6 +81,17 @@ To run the tests, use the following command:
 npm test
 ```
 
+## Road map
+The larger idea of this project is to have a starting point for research projects to build on and potentially contribute back. Most research projects require some sort of a data viewer and being in the department of architecture we usually have a need to incorporate GIS data along with 3D geometries.
+
+The long-term roadmap is to support the following features
+- Importing honeybee geometry (HBJSON) as pickable objects (see LBTools Spider viewer)
+- Importing dragonfly geometry (DFJSON) as pickable objects
+- Add a search feature to filter objects in the scene
+- Add more supported chart types
+- Add a demo to connect to live APIs (ex: the Västrafik API for trams and busses)
+- Add a scenario feature to switch between predefined assets
+
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
 
