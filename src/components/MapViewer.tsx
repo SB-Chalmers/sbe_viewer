@@ -2,14 +2,16 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import DeckGL, { DeckGLRef } from '@deck.gl/react';
 import { MapView, ViewStateChangeParameters } from '@deck.gl/core';
 import LeftDrawer from './LeftDrawer';
-import MapComponent from './MapComponent';
+import MapComponent, { MapComponentProps } from './MapComponent';
 import SunlightSlider from './SunlightSlider';
 import { loadGisData, loadTreeData } from '../utils/gisDataLoader';
 import mapboxgl from 'mapbox-gl';
 import { MapboxAccessToken } from '../config/mapbox';
 import RightDrawer from './RightDrawer';
-import Stats from 'stats.js';
 import { Layer } from '@deck.gl/core';
+import { generateLighting } from '../utils/lightingEffects';
+import { createLayers } from '../utils/layersConfig'; // <-- new import
+import { DEFAULT_SUNLIGHT_TIME } from '../utils/constants';
 
 // Define ViewState interface
 interface ViewState {
@@ -44,15 +46,13 @@ const INITIAL_VIEW_STATE: ViewState = {
 const MapViewer: React.FC = () => {
     const [gisData, setGisData] = useState<any>(null);
     const [tokenValid, setTokenValid] = useState(false);
-    const [sunlightTime, setSunlightTime] = useState(Date.UTC(2019, 2, 1, 14));
+    const [sunlightTime, setSunlightTime] = useState(DEFAULT_SUNLIGHT_TIME);
     const [viewState, setViewState] = useState<ViewState>(INITIAL_VIEW_STATE);
     const deckRef = useRef<DeckGLRef>(null);
-    const stats = useRef<Stats | null>(null);
 
     // Memoize state values to avoid unnecessary renders
     const [basemapStyle, setBasemapStyle] = useState('mapbox://styles/mapbox/light-v10');
     const [treeData, setTreeData] = useState<any>(null);
-    const [treePointsData, setTreePointsData] = useState<any>(null);
     const [showBasemap, setShowBasemap] = useState(true);
     
     const [colorBy, setColorBy] = useState<string>(''); // Set default value to empty string
@@ -67,12 +67,7 @@ const MapViewer: React.FC = () => {
 
     const [isDarkMode, setIsDarkMode] = useState(false);
     
-    // Update basemap style when theme changes
-    const currentBasemapStyle = useMemo(() => {
-        return isDarkMode ? 
-            'mapbox://styles/mapbox/dark-v10' : 
-            'mapbox://styles/mapbox/light-v10';
-    }, [isDarkMode]);
+    const [layers, setLayers] = useState<any[]>([]);
 
     const handleBasemapChange = useCallback((style: string) => {
         setBasemapStyle(style);
@@ -117,7 +112,6 @@ const MapViewer: React.FC = () => {
             if (!treeData) {
                 const data = await loadTreeData();
                 setTreeData(data);
-                setTreePointsData(data);
             }
         };
         fetchTreeData();
@@ -166,6 +160,36 @@ const MapViewer: React.FC = () => {
         setColorBy(colorBy); // Update state when colorBy changes
     }, []);
 
+    const handleLayerClick = useCallback((info: any) => {
+        // Custom click handler logic
+    }, []);
+    
+    useEffect(() => {
+        if (!gisData) return;
+        const updateLayers = async () => {
+            const resolvedLayers: any[] = await createLayers(gisData, treeData, handleLayerClick, colorBy);
+            setLayers(resolvedLayers.filter(layer => layer && layerVisibility[(layer as any).id]));
+        };
+        updateLayers();
+    }, [gisData, treeData, layerVisibility, handleLayerClick, colorBy]);
+
+    // Consolidated tooltip callback
+    const getTooltip = useCallback((info: { object?: any }) => {
+        if (!info.object) return null;
+        const properties = info.object.properties || {};
+        return {
+            text: [
+                `Name: ${properties.name || 'N/A'}`,
+                `Type: ${properties.type || 'N/A'}`,
+                `Height: ${properties.height || 'N/A'} m`,
+                `Function: ${properties.function || 'N/A'}`,
+                `Floors: ${properties.floors || 'N/A'}`,
+            ].join('\n')
+        };
+    }, []);
+
+    const lightingEffects = useMemo(() => [generateLighting(new Date(sunlightTime))], [sunlightTime]);
+
     return (
         <div style={{ display: 'flex', height: '100vh', width: '100vw', overflow: 'hidden' }}>
             <LeftDrawer 
@@ -182,19 +206,24 @@ const MapViewer: React.FC = () => {
                     viewState={viewState}
                     onViewStateChange={onViewStateChange}
                     style={{ backgroundColor: 'transparent', height: '100%', width: '100%' }}
+                    effects={lightingEffects}
+                    layers={layers}
+                    getTooltip={getTooltip}
                 >
-                    <MapComponent 
-                        initialViewState={viewState}
-                        mapboxAccessToken={mapboxgl.accessToken || ''}
-                        sunlightTime={sunlightTime}
-                        basemapStyle={basemapStyle}
-                        gisData={gisData}
-                        treeData={treeData}
-                        layerVisibility={layerVisibility}
-                        showBasemap={showBasemap}
-                        treePointsData={treeData}
-                        colorBy={colorBy} // Pass colorBy to MapComponent
-                    />
+                    {showBasemap && (
+                        <MapComponent 
+                            initialViewState={viewState}
+                            mapboxAccessToken={mapboxgl.accessToken || ''}
+                            sunlightTime={sunlightTime}
+                            basemapStyle={basemapStyle}
+                            gisData={gisData}
+                            treeData={treeData}
+                            layerVisibility={layerVisibility}
+                            showBasemap={showBasemap}
+                            treePointsData={treeData} // Using treeData as treePointsData
+                            colorBy={colorBy}
+                        />
+                    )}
                 </DeckGL>
                 <SunlightSlider sunlightTime={sunlightTime} onSliderChange={handleSliderChange} />
                 <button 

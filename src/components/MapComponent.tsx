@@ -3,14 +3,13 @@ import { Map, NavigationControl, GeolocateControl } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import DeckGL from '@deck.gl/react';
 import { createLayers } from '../utils/layersConfig';
-import { lightingEffect, dirLight } from '../utils/lightingEffects';
+import { lightingEffect, sun } from '../utils/lightingEffects';
 import './PopupComponent.css';
-import SunlightSlider from './SunlightSlider';
 import Stats from 'stats.js';
 
 const MAPBOX_TOKEN = process.env.MAPBOX_TOKEN as string;
 
-interface MapComponentProps {
+export interface MapComponentProps {
     initialViewState: {
         longitude: number;
         latitude: number;
@@ -26,7 +25,7 @@ interface MapComponentProps {
     layerVisibility: { [key: string]: boolean };
     showBasemap: boolean;
     treePointsData: any;
-    colorBy: string; // Add this line
+    colorBy: string;
 }
 
 const MapComponent: React.FC<MapComponentProps> = ({ 
@@ -39,18 +38,19 @@ const MapComponent: React.FC<MapComponentProps> = ({
     layerVisibility,
     showBasemap,
     treePointsData,
-    colorBy // Add this line
+    colorBy
 }) => {
     const mapRef = useRef<any>(null);
     const stats = useRef<Stats | null>(null);
-    const [layers, setLayers] = useState<any[]>([]);
 
     // Memoize lighting effects to prevent re-rendering
     const effects = useMemo(() => [lightingEffect], []);
 
     // Update light effect when sunlightTime changes
     useEffect(() => {
-        dirLight.timestamp = sunlightTime;
+        if (sunlightTime) {
+            sun.timestamp = sunlightTime;
+        }
     }, [sunlightTime]);
 
     // Set up FPS monitoring in development mode
@@ -74,24 +74,35 @@ const MapComponent: React.FC<MapComponentProps> = ({
         }
     }, []);
 
-    // Handle layer clicks
+    // Memoize handleLayerClick
     const handleLayerClick = useCallback((info: any) => {
         // Custom click handler logic
-    }, []);
+    }, []); // Empty dependency array since it doesn't depend on any props
 
-    // Update layers when gisData, treeData, or other dependencies change
+    // Add state for layers
+    const [currentLayers, setCurrentLayers] = useState<any[]>([]);
+
+    // Replace the layers useMemo with useEffect
     useEffect(() => {
-        if (!gisData) return;
-
         const updateLayers = async () => {
-            console.log('Updating layers with colorBy:', colorBy);
-            const resolvedLayers: any[] = await createLayers(gisData, treeData, handleLayerClick, sunlightTime, colorBy);
-            console.log('Resolved layers:', resolvedLayers);
-            setLayers(resolvedLayers.filter(layer => layer && layerVisibility[(layer as any).id]));
+            if (!gisData) {
+                setCurrentLayers([]);
+                return;
+            }
+            
+            try {
+                const newLayers = await createLayers(gisData, treeData, handleLayerClick, colorBy);
+                const filteredLayers = (Array.isArray(newLayers) ? newLayers : [])
+                    .filter(layer => layer && layerVisibility[(layer as any).id]);
+                setCurrentLayers(filteredLayers);
+            } catch (error) {
+                console.error('Error creating layers:', error);
+                setCurrentLayers([]);
+            }
         };
 
         updateLayers();
-    }, [gisData, treeData, sunlightTime, layerVisibility, handleLayerClick, colorBy]);
+    }, [gisData, treeData, layerVisibility, colorBy, handleLayerClick]);
 
     // Memoize tooltip function to prevent re-renders
     const getTooltip = useCallback((info: { object?: any }) => {
@@ -113,7 +124,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
             <DeckGL
                 initialViewState={initialViewState}
                 controller={true}
-                layers={layers} // ✅ Now stored in state
+                layers={currentLayers} // Use currentLayers instead of layers
                 effects={effects} // ✅ Now memoized
                 getTooltip={getTooltip} // ✅ Now memoized
                 useDevicePixels={true}
@@ -127,7 +138,6 @@ const MapComponent: React.FC<MapComponentProps> = ({
                     />
                 )}
             </DeckGL>
-            <SunlightSlider sunlightTime={sunlightTime} onSliderChange={() => {}} />
         </div>
     );
 };

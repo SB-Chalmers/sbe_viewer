@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Slider, Tooltip, IconButton, Collapse, Button, Paper } from '@mui/material';
 import { ExpandMore, ExpandLess, WbSunny, Stop, AccessTime } from '@mui/icons-material';
 import { DateTime } from 'luxon';
+import { DEFAULT_SUNLIGHT_TIME } from '../utils/constants';
 
 interface SunlightSliderProps {
     sunlightTime: number;
@@ -18,30 +19,46 @@ const SunlightSlider: React.FC<SunlightSliderProps> = ({ sunlightTime, onSliderC
     };
 
     const handleDateChange = (event: any, newValue: number | number[]) => {
-        const currentTime = DateTime.fromMillis(sunlightTime).setZone('Europe/Stockholm').diff(DateTime.fromMillis(sunlightTime).setZone('Europe/Stockholm').startOf('day')).toMillis();
-        const newDate = DateTime.fromMillis(newValue as number).setZone('Europe/Stockholm').startOf('day').toMillis();
-        const combinedDateTime = newDate + currentTime;
-        onSliderChange(combinedDateTime);
+        const dt = DateTime.fromMillis(sunlightTime).setZone('Europe/Stockholm');
+        const newDate = DateTime.fromMillis(newValue as number).setZone('Europe/Stockholm');
+        const combinedDate = newDate.set({
+            hour: dt.hour,
+            minute: dt.minute,
+            second: dt.second,
+            millisecond: dt.millisecond
+        });
+        onSliderChange(combinedDate.toMillis());
     };
 
     const handleTimeChange = (event: any, newValue: number | number[]) => {
-        const time = DateTime.fromMillis(sunlightTime).setZone('Europe/Stockholm').startOf('day').plus({ milliseconds: newValue as number }).toMillis();
-        onSliderChange(time);
+        const dt = DateTime.fromMillis(sunlightTime).setZone('Europe/Stockholm');
+        const hours = Math.floor((newValue as number) / 3600000);
+        const minutes = Math.floor(((newValue as number) % 3600000) / 60000);
+        const newTime = dt.set({
+            hour: hours,
+            minute: minutes,
+            second: 0,
+            millisecond: 0
+        });
+        onSliderChange(newTime.toMillis());
     };
 
     const animateSun = () => {
         setAnimating(true);
-        let startTime = DateTime.fromMillis(sunlightTime).setZone('Europe/Stockholm').startOf('day').toMillis();
-        const endTime = startTime + 24 * 3600000; // 24 hours in milliseconds
-        const step = (endTime - startTime) / 60; // 6 seconds animation
+        const dt = DateTime.fromMillis(sunlightTime).setZone('Europe/Stockholm');
+        let currentTime = dt.set({ hour: 0, minute: 0, second: 0, millisecond: 0 }).toMillis();
+        const endTime = dt.set({ hour: 23, minute: 59, second: 59, millisecond: 999 }).toMillis();
+        
+        const step = (endTime - currentTime) / 240; // Complete in 24 seconds (10 updates per hour)
 
         intervalRef.current = setInterval(() => {
-            startTime += step;
-            if (startTime >= endTime) {
+            currentTime += step;
+            if (currentTime >= endTime) {
                 clearInterval(intervalRef.current!);
                 setAnimating(false);
+                currentTime = dt.set({ hour: 0, minute: 0, second: 0, millisecond: 0 }).toMillis();
             }
-            onSliderChange(startTime);
+            onSliderChange(currentTime);
         }, 100);
     };
 
@@ -101,10 +118,10 @@ const SunlightSlider: React.FC<SunlightSliderProps> = ({ sunlightTime, onSliderC
                                     fontFamily: 'var(--font-family)'
                                 }
                             }}
-                            value={DateTime.fromMillis(sunlightTime).setZone('Europe/Stockholm').startOf('day').toMillis()}
+                            value={DateTime.fromMillis(sunlightTime).setZone('Europe/Stockholm').toMillis()}
                             onChange={handleDateChange}
-                            min={DateTime.local().setZone('Europe/Stockholm').startOf('year').toMillis()}
-                            max={DateTime.local().setZone('Europe/Stockholm').endOf('year').toMillis()}
+                            min={DateTime.fromMillis(DEFAULT_SUNLIGHT_TIME).minus({ months: 6 }).toMillis()}
+                            max={DateTime.fromMillis(DEFAULT_SUNLIGHT_TIME).plus({ months: 6 }).toMillis()}
                             step={24 * 3600000} // 1 day in milliseconds
                             valueLabelDisplay="auto"
                             valueLabelFormat={(value) => DateTime.fromMillis(value).toLocaleString(DateTime.DATE_MED)}
@@ -120,7 +137,8 @@ const SunlightSlider: React.FC<SunlightSliderProps> = ({ sunlightTime, onSliderC
                                     fontFamily: 'var(--font-family)'
                                 }
                             }}
-                            value={DateTime.fromMillis(sunlightTime).setZone('Europe/Stockholm').diff(DateTime.fromMillis(sunlightTime).setZone('Europe/Stockholm').startOf('day')).toMillis()}
+                            value={DateTime.fromMillis(sunlightTime).setZone('Europe/Stockholm').hour * 3600000 + 
+                                   DateTime.fromMillis(sunlightTime).setZone('Europe/Stockholm').minute * 60000}
                             onChange={handleTimeChange}
                             min={0}
                             max={24 * 3600000} // 24 hours in milliseconds

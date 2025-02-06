@@ -35,7 +35,6 @@ const generateBoundingBox = (data: any): Feature<Polygon> => {
 export const createBuildingLayer = (
   gisData: any,
   handleLayerClick: (info: any) => void,
-  timeOfDay: string,
   colorBy: string
 ) => {
   console.log('Creating Building Layer with colorBy:', colorBy);

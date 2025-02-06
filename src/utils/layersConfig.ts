@@ -4,16 +4,11 @@ import { createTreeLayer, createTreePointsLayer } from './layers/treeLayers';
 import { createBuildingLayer, createLandCoverLayer } from './layers/buildingLayers';
 import { createHBJSONLayer } from './layers/hbjsonLayer';
 
-export const createLayers = async (gisData: any, treeData: any, handleLayerClick: (info: any) => void, sunlightTime: number, colorBy: string) => {
+export const createLayers = async (gisData: any, treeData: any, handleLayerClick: (info: any) => void, colorBy: string) => {
   console.log('Creating layers with colorBy:', colorBy);
-  const date = DateTime.fromMillis(sunlightTime).setZone('Europe/Stockholm');
-  const sunrise = date.startOf('day').plus({ hours: 6 });
-  const sunset = date.startOf('day').plus({ hours: 18 });
-  const timeOfDay = date > sunrise && date < sunset ? "day" : "night";
-
   const hbjsonPosition: [number, number, number] = [11.9690435, 57.7068985, 0]; // [lon, lat, alt]
   const layers = [
-    await createBuildingLayer(gisData, handleLayerClick, timeOfDay, colorBy),
+    await createBuildingLayer(gisData, handleLayerClick, colorBy),
     await createLandCoverLayer(gisData),
     await createTreePointsLayer(treeData),
     await createTreeLayer(treeData), // Ensure the tree layer is awaited
