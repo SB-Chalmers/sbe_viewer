@@ -3,7 +3,7 @@ import { Map } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import DeckGL from '@deck.gl/react';
 import { createLayers } from '../utils/layersConfig';
-import { lightingEffect, sun } from '../utils/lightingEffects';
+import { lightingEffect, sun, generateLighting } from '../utils/lightingEffects';
 import './PopupComponent.css';
 import Stats from 'stats.js';
 
@@ -42,12 +42,13 @@ const MapComponent: React.FC<MapComponentProps> = ({
     const stats = useRef<Stats | null>(null);
 
     // Memoize lighting effects to prevent re-rendering
-    const effects = useMemo(() => [lightingEffect], []);
+    const [effects, setEffects] = useState([lightingEffect]);
 
     // Update light effect when sunlightTime changes
     useEffect(() => {
         if (sunlightTime) {
             sun.timestamp = sunlightTime;
+            setEffects([generateLighting(new Date(sunlightTime))]);
         }
     }, [sunlightTime]);
 
@@ -123,7 +124,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
                 initialViewState={initialViewState}
                 controller={true}
                 layers={currentLayers}
-                effects={effects}
+                effects={effects} // Ensure this is updated
                 getTooltip={getTooltip}
                 useDevicePixels={true}
             >
