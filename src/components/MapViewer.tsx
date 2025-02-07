@@ -32,7 +32,7 @@ interface LayerWithVisibility extends Layer {
 const INITIAL_VIEW_STATE: ViewState = {
     longitude: 11.9690435, 
     latitude: 57.7068985,
-    zoom: 17,
+    zoom: 15,
     pitch: 45,
     bearing: 0,
     maxZoom: 20,
@@ -202,7 +202,7 @@ const MapViewer: React.FC = () => {
                     getTooltip={getTooltip}
                     useDevicePixels={true}
                     parameters={{ 
-                        
+
                      }}
                     
                 >
