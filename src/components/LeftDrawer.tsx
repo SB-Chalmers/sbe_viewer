@@ -21,7 +21,7 @@ import ImportDataTab from './tabs/ImportDataTab';
 import LayerManagementTab from './tabs/LayerManagementTab';
 import BasemapTab from './tabs/BasemapTab';
 import LightingTab from './tabs/LightingTab';
-import { Layer as DeckLayer } from '@deck.gl/core'; 
+import { Layer as DeckLayer, Layer } from '@deck.gl/core'; 
 
 interface LayerWithVisibility extends DeckLayer {
     visible: boolean;
@@ -33,9 +33,10 @@ interface LeftDrawerProps {
     layers: LayerWithVisibility[]; // Use LayerWithVisibility
     onVisibilityToggle: (id: string) => void;
     onColorByChange: (colorBy: string) => void;
+    onAddLayer: (layer: Layer) => void;  // Add this line
 }
 
-const LeftDrawer: React.FC<LeftDrawerProps> = ({ resetView, onBasemapChange, layers, onVisibilityToggle, onColorByChange }) => {
+const LeftDrawer: React.FC<LeftDrawerProps> = ({ resetView, onBasemapChange, layers, onVisibilityToggle, onColorByChange, onAddLayer }) => {
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [basemapStyle, setBasemapStyle] = useState('mapbox://styles/mapbox/light-v10');
 

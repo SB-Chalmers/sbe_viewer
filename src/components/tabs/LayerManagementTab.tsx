@@ -31,7 +31,7 @@ const LayerManagementTab: React.FC<LayerManagementTabProps> = ({ layers, onVisib
         { id: 'land-cover', name: 'Land Cover' },
         { id: 'tree-layer', name: 'Tree Layer' },
         { id: 'tree-points-layer', name: 'Tree Points Layer' },
-        { id: 'hbjson-layer', name: 'HBJSON Layer' }
+        { id: 'hbjson-glb-layer', name: 'HBJSON Layer' }
     ];
 
     const eligibleAttributes = [

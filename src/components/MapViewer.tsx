@@ -5,8 +5,6 @@ import LeftDrawer from './LeftDrawer';
 import MapComponent, { MapComponentProps } from './MapComponent';
 import SunlightSlider from './SunlightSlider';
 import { loadGisData, loadTreeData } from '../utils/gisDataLoader';
-import mapboxgl from 'mapbox-gl';
-import { MapboxAccessToken } from '../config/mapbox';
 import RightDrawer from './RightDrawer';
 import { Layer } from '@deck.gl/core';
 import { generateLighting } from '../utils/lightingEffects';
@@ -45,7 +43,6 @@ const INITIAL_VIEW_STATE: ViewState = {
 
 const MapViewer: React.FC = () => {
     const [gisData, setGisData] = useState<any>(null);
-    const [tokenValid, setTokenValid] = useState(false);
     const [sunlightTime, setSunlightTime] = useState(DEFAULT_SUNLIGHT_TIME);
     const [viewState, setViewState] = useState<ViewState>(INITIAL_VIEW_STATE);
     const deckRef = useRef<DeckGLRef>(null);
@@ -62,7 +59,8 @@ const MapViewer: React.FC = () => {
         'land-cover': true,
         'tree-layer': true,
         'tree-points-layer': true,
-        'hbjson-glb-layer': true
+        'hbjson-glb-layer': true,
+        'tile-3d-layer': true
     }));
 
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -116,18 +114,6 @@ const MapViewer: React.FC = () => {
         };
         fetchTreeData();
     }, [treeData]);
-
-    // Mapbox Token Validation
-    useEffect(() => {
-        const token = MapboxAccessToken || process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
-        if (!token) {
-            console.error('Mapbox token missing in configuration');
-            return;
-        }
-        mapboxgl.accessToken = token;
-        setTokenValid(true);
-    }, []);
-
 
     // Handlers: Memoized to prevent unnecessary re-renders
     const handleSliderChange = useCallback((newValue: number) => {
@@ -190,6 +176,10 @@ const MapViewer: React.FC = () => {
 
     const lightingEffects = useMemo(() => [generateLighting(new Date(sunlightTime))], [sunlightTime]);
 
+    const handleAddLayer = useCallback((newLayer: Layer) => {
+        setLayers(prevLayers => [...prevLayers, newLayer]);
+    }, []);
+
     return (
         <div style={{ display: 'flex', height: '100vh', width: '100vw', overflow: 'hidden' }}>
             <LeftDrawer 
@@ -197,7 +187,8 @@ const MapViewer: React.FC = () => {
                 onBasemapChange={handleBasemapChange} 
                 layers={Object.keys(layerVisibility).map(id => ({ id, visible: layerVisibility[id] } as LayerWithVisibility))} 
                 onVisibilityToggle={handleVisibilityToggle} 
-                onColorByChange={handleColorByChange} // Add this line
+                onColorByChange={handleColorByChange}
+                onAddLayer={handleAddLayer}  // Changed from importDataProps
             />
             <div style={{ flexGrow: 1, position: 'relative' }}>
                 <DeckGL
@@ -213,7 +204,7 @@ const MapViewer: React.FC = () => {
                     {showBasemap && (
                         <MapComponent 
                             initialViewState={viewState}
-                            mapboxAccessToken={mapboxgl.accessToken || ''}
+                            mapboxAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN || ''} // Pass the token as a prop
                             sunlightTime={sunlightTime}
                             basemapStyle={basemapStyle}
                             gisData={gisData}

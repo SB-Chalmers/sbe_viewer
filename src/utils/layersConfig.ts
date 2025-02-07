@@ -6,13 +6,13 @@ import { create3DTilesLayer } from './layers/3dTiles';
 
 export const createLayers = async (gisData: any, treeData: any, handleLayerClick: (info: any) => void, colorBy: string) => {
   console.log('Creating layers with colorBy:', colorBy);
-  const hbjsonPosition: [number, number, number] = [11.9690435, 57.7068985, 0]; // [lon, lat, alt]
+  const hbjsonPosition: [number, number, number] = [11.979, 57.707, 0]; // [lon, lat, alt]
   const layers = [
     await createBuildingLayer(gisData, handleLayerClick, colorBy),
     await createLandCoverLayer(gisData),
     await createTreePointsLayer(treeData),
     await createTreeLayer(treeData), // Ensure the tree layer is awaited
-    await createHBJSONLayer(hbjsonPosition),
+    await createHBJSONLayer(hbjsonPosition, 'demo.hbjson'), // Add default path
     await create3DTilesLayer()
   ].filter(layer => layer !== null); // Remove any null layers
 

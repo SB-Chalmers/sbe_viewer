@@ -65,7 +65,6 @@ coverage/
 
 # Gatsby files
 .cache/
-public/
 
 # Gridsome files
 .cache/

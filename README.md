@@ -39,7 +39,6 @@ gis-viewer-app
 │   │   └── layersConfig.ts
 │   ├── index.css              # Global CSS styles
 │   ├── index.tsx              # Main entry point for React
-│   ├── mapbox-gl-geocoder.d.ts
 │   └── react-app-env.d.ts
 ├── public
 │   ├── index.html             # Main HTML file for the React application

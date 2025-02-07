@@ -7,8 +7,6 @@ import { lightingEffect, sun } from '../utils/lightingEffects';
 import './PopupComponent.css';
 import Stats from 'stats.js';
 
-const MAPBOX_TOKEN = process.env.MAPBOX_TOKEN as string;
-
 export interface MapComponentProps {
     initialViewState: {
         longitude: number;
@@ -124,9 +122,9 @@ const MapComponent: React.FC<MapComponentProps> = ({
             <DeckGL
                 initialViewState={initialViewState}
                 controller={true}
-                layers={currentLayers} // Use currentLayers instead of layers
-                effects={effects} // ✅ Now memoized
-                getTooltip={getTooltip} // ✅ Now memoized
+                layers={currentLayers}
+                effects={effects}
+                getTooltip={getTooltip}
                 useDevicePixels={true}
             >
                 {showBasemap && (

@@ -27,7 +27,7 @@ module.exports = {
         test: /\.js$/,
         use: ['source-map-loader'],
         enforce: 'pre',
-        exclude: /node_modules\/wgsl_reflect/, // Ignore this package
+        exclude: /node_modules[\\/]wgsl_reflect/,
       },
     ],
   },
