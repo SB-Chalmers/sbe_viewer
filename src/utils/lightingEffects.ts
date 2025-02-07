@@ -11,14 +11,15 @@ const sun = new SunLight({
     color: [255, 215, 130], // Warmer and more saturated yellow sunlight
     intensity: 2.6, // Slightly stronger for a glowing effect
     _shadow: true
+    
 });
 
 const lightingEffect = new LightingEffect({ sky, sun });
+lightingEffect.shadowColor = [0, 0, 0, 0.5] ;
 
 export function generateLighting(date: Date) {
     const timestamp = date.getTime();
     
-    // Create a new sun instance each time to ensure clean state
     sun.timestamp = timestamp;
 
     // Create new effect with new sun instance

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState, useMemo, useCallback } from 'react';
-import { Map, NavigationControl, GeolocateControl } from 'react-map-gl';
+import { Map } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import DeckGL from '@deck.gl/react';
 import { createLayers } from '../utils/layersConfig';
