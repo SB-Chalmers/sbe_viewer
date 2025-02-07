@@ -12,8 +12,8 @@ export const createLayers = async (gisData: any, treeData: any, handleLayerClick
     await createLandCoverLayer(gisData),
     await createTreePointsLayer(treeData),
     await createTreeLayer(treeData), // Ensure the tree layer is awaited
-    await createHBJSONLayer(hbjsonPosition, 'demo.hbjson'), // Add default path
-    await create3DTilesLayer()
+    await createHBJSONLayer(hbjsonPosition, 'demo.hbjson') // Add default path
+    //await create3DTilesLayer()
   ].filter(layer => layer !== null); // Remove any null layers
 
   console.log('Layers created:', layers);

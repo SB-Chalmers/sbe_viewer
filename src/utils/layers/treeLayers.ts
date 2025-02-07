@@ -34,10 +34,11 @@ export const createTreeLayer = async (data: any, id: string = 'tree-layer') => {
 
       // Enable picking interactions
       pickable: false,
-      getColor: [150, 200, 150, 255], // Default color
+      //getColor: [150, 200, 150, 255], // Default color
 
       // Use realistic PBR lighting
       _lighting: 'pbr',
+      animation: false,
 
       onError: (error: any) => {
           console.error('Error loading ScenegraphLayer:', error);
@@ -54,7 +55,7 @@ export const createTreePointsLayer = (data: any, id: string = 'tree-points-layer
         data,
         pointRadiusMinPixels: 2,
         getPointRadius: 4,
-        getFillColor: [0, 200, 0],
+        getFillColor: [0, 200, 0,200],
         pickable: false,
         getLineWidth: 1,
     });

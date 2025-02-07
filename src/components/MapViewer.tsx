@@ -200,6 +200,11 @@ const MapViewer: React.FC = () => {
                     effects={lightingEffects}
                     layers={layers}
                     getTooltip={getTooltip}
+                    useDevicePixels={true}
+                    parameters={{ 
+                        
+                     }}
+                    
                 >
                     {showBasemap && (
                         <MapComponent 

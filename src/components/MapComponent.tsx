@@ -127,6 +127,9 @@ const MapComponent: React.FC<MapComponentProps> = ({
                 effects={effects} // Ensure this is updated
                 getTooltip={getTooltip}
                 useDevicePixels={true}
+                parameters={{ 
+                        
+                }}
             >
                 {showBasemap && (
                     <Map

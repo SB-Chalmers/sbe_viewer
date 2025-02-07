@@ -58,14 +58,15 @@ export const createBuildingLayer = (
       const isCategorical = typeof value === "string";
       return getColorFromValue(value, colorBy, isCategorical, min, max);
     },
-    material: {
-      ambient: 0.3,
-      diffuse: 0.2,
-      shininess: 10,
-      specularColor: [150, 180, 180]
-    },
+    // material: {
+    //   ambient: 0.3,
+    //   diffuse: 0.2,
+    //   shininess: 10,
+    //   specularColor: [150, 180, 180]
+    // },
     _shadows: true,
     pickable: true,
+    parameters: {depthTest: true},
     onClick: handleLayerClick,
     updateTriggers: {
       getFillColor: colorBy,
@@ -81,6 +82,7 @@ export const createLandCoverLayer = (gisData: any) => {
     data: landCover,
     getFillColor: [0, 0, 0, 0],
     getLineColor: [0, 0, 0, 0],
+    _shadows: false,
     pickable: false
   });
 };

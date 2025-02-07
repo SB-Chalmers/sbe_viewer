@@ -3,18 +3,18 @@ import { DEFAULT_SUNLIGHT_TIME } from './constants';
 
 const sky = new AmbientLight({
     color: [200, 206, 235],
-    intensity: 2.2
+    intensity: 2
 });
 
 const sun = new SunLight({
     timestamp: DEFAULT_SUNLIGHT_TIME,
     color: [255, 215, 130],
-    intensity: 2.6,
+    intensity: 1,
     _shadow: true
 });
 
 const lightingEffect = new LightingEffect({ sky, sun });
-lightingEffect.shadowColor = [0, 0, 0, 0.5];
+lightingEffect.shadowColor = [0, 0, 0, 200 / 255];
 
 export function generateLighting(date: Date) {
     const timestamp = date.getTime();
