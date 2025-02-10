@@ -60,7 +60,7 @@ gis-viewer-app
    ```
 2. Navigate to the project directory:
    ```
-   cd gis-viewer-app
+   cd sbe-viewer
    ```
 3. Install the dependencies:
    ```
@@ -74,11 +74,6 @@ npm start
 ```
 This will launch the application in your default web browser.
 
-## Running Tests
-To run the tests, use the following command:
-```
-npm test
-```
 
 ## Road map
 The larger idea of this project is to have a starting point for research projects to build on and potentially contribute back. Most research projects require some sort of a data viewer and being in the department of architecture we usually have a need to incorporate GIS data along with 3D geometries.
