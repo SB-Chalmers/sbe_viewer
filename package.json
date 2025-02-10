@@ -1,7 +1,7 @@
 {
   "name": "sbe-viewer",
   "version": "0.0.1",
-  "description": "A simple viewer for GIS files with filtering capabilities.",
+  "description": "A simple viewer for HBJSON and GIS files.",
   "main": "src/App.tsx",
   "homepage": "https://sb-chalmers.github.io/sbe_viewer",
   "scripts": {
