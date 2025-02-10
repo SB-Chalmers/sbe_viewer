@@ -1,0 +1,4837 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-01-22T16:20:57Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1499296479",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9690435,
+          57.7068985
+        ]
+      },
+      "id": "node/1499296479"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1499296480",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9696739,
+          57.7068421
+        ]
+      },
+      "id": "node/1499296480"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1499296495",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9692935,
+          57.70687
+        ]
+      },
+      "id": "node/1499296495"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1499296509",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9693419,
+          57.7069454
+        ]
+      },
+      "id": "node/1499296509"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1499296525",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9687107,
+          57.7066958
+        ]
+      },
+      "id": "node/1499296525"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1499296537",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9692727,
+          57.7067836
+        ]
+      },
+      "id": "node/1499296537"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1499296548",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9687139,
+          57.7068456
+        ]
+      },
+      "id": "node/1499296548"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1705681397",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9720646,
+          57.7073585
+        ]
+      },
+      "id": "node/1705681397"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1705681400",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9722174,
+          57.7073592
+        ]
+      },
+      "id": "node/1705681400"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1705681402",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9723688,
+          57.70736
+        ]
+      },
+      "id": "node/1705681402"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1705681404",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9724947,
+          57.7073615
+        ]
+      },
+      "id": "node/1705681404"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1705681406",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.972615,
+          57.7073615
+        ]
+      },
+      "id": "node/1705681406"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1705681408",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9729758,
+          57.7073623
+        ]
+      },
+      "id": "node/1705681408"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1705681411",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9731003,
+          57.7073623
+        ]
+      },
+      "id": "node/1705681411"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1705681416",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9727409,
+          57.7073638
+        ]
+      },
+      "id": "node/1705681416"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1705681417",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9732262,
+          57.7073638
+        ]
+      },
+      "id": "node/1705681417"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1705681418",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9733465,
+          57.707366
+        ]
+      },
+      "id": "node/1705681418"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1705681421",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9734739,
+          57.7073675
+        ]
+      },
+      "id": "node/1705681421"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1705681423",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9735984,
+          57.7073683
+        ]
+      },
+      "id": "node/1705681423"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1705681425",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9737285,
+          57.7073713
+        ]
+      },
+      "id": "node/1705681425"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1849528354",
+        "genus": "Platanus",
+        "natural": "tree",
+        "species:en": "plane",
+        "species:sv": "platan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.970955,
+          57.7050141
+        ]
+      },
+      "id": "node/1849528354"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861298971",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9689959,
+          57.7045883
+        ]
+      },
+      "id": "node/1861298971"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861298973",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9689613,
+          57.704655
+        ]
+      },
+      "id": "node/1861298973"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861298997",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9689252,
+          57.7047246
+        ]
+      },
+      "id": "node/1861298997"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299002",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9688469,
+          57.7048719
+        ]
+      },
+      "id": "node/1861299002"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299005",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9688025,
+          57.7049551
+        ]
+      },
+      "id": "node/1861299005"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299010",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9687628,
+          57.7050296
+        ]
+      },
+      "id": "node/1861299010"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299013",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9687229,
+          57.7051046
+        ]
+      },
+      "id": "node/1861299013"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299016",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9686815,
+          57.7051823
+        ]
+      },
+      "id": "node/1861299016"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299017",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.96864,
+          57.7052604
+        ]
+      },
+      "id": "node/1861299017"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299018",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9685698,
+          57.7053972
+        ]
+      },
+      "id": "node/1861299018"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299019",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9685331,
+          57.7054668
+        ]
+      },
+      "id": "node/1861299019"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299020",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9684971,
+          57.7055353
+        ]
+      },
+      "id": "node/1861299020"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299021",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9684597,
+          57.7056061
+        ]
+      },
+      "id": "node/1861299021"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299022",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9684193,
+          57.7056828
+        ]
+      },
+      "id": "node/1861299022"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299038",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9683844,
+          57.7057492
+        ]
+      },
+      "id": "node/1861299038"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299046",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9683052,
+          57.7058957
+        ]
+      },
+      "id": "node/1861299046"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299051",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.968268,
+          57.7059672
+        ]
+      },
+      "id": "node/1861299051"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299054",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9682352,
+          57.7060304
+        ]
+      },
+      "id": "node/1861299054"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299059",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9681967,
+          57.7061045
+        ]
+      },
+      "id": "node/1861299059"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299063",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9681586,
+          57.7061779
+        ]
+      },
+      "id": "node/1861299063"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299066",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9676614,
+          57.7070653
+        ]
+      },
+      "id": "node/1861299066"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299068",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9676289,
+          57.7071278
+        ]
+      },
+      "id": "node/1861299068"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299071",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9675933,
+          57.7071864
+        ]
+      },
+      "id": "node/1861299071"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299072",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9675598,
+          57.7072429
+        ]
+      },
+      "id": "node/1861299072"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299073",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9675314,
+          57.7073042
+        ]
+      },
+      "id": "node/1861299073"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299074",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9675009,
+          57.7073677
+        ]
+      },
+      "id": "node/1861299074"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1861299075",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "taxon:genus:sv": "lind"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9674633,
+          57.7074307
+        ]
+      },
+      "id": "node/1861299075"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840941",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9633171,
+          57.7045956
+        ]
+      },
+      "id": "node/2163840941"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840943",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9636406,
+          57.7046485
+        ]
+      },
+      "id": "node/2163840943"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840944",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.96328,
+          57.7046621
+        ]
+      },
+      "id": "node/2163840944"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840945",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9636012,
+          57.7047222
+        ]
+      },
+      "id": "node/2163840945"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840946",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9632403,
+          57.7047336
+        ]
+      },
+      "id": "node/2163840946"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840947",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9635633,
+          57.704793
+        ]
+      },
+      "id": "node/2163840947"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840948",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.963202,
+          57.7048023
+        ]
+      },
+      "id": "node/2163840948"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840949",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9635291,
+          57.7048569
+        ]
+      },
+      "id": "node/2163840949"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840950",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9634878,
+          57.7049342
+        ]
+      },
+      "id": "node/2163840950"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840951",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9631256,
+          57.7049397
+        ]
+      },
+      "id": "node/2163840951"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840952",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9634509,
+          57.705003
+        ]
+      },
+      "id": "node/2163840952"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840953",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9630543,
+          57.7050779
+        ]
+      },
+      "id": "node/2163840953"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840955",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9633675,
+          57.7051384
+        ]
+      },
+      "id": "node/2163840955"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840957",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.963011,
+          57.705156
+        ]
+      },
+      "id": "node/2163840957"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840958",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9633275,
+          57.7052104
+        ]
+      },
+      "id": "node/2163840958"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840960",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9629745,
+          57.7052219
+        ]
+      },
+      "id": "node/2163840960"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840961",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9632868,
+          57.7052835
+        ]
+      },
+      "id": "node/2163840961"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840963",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9629354,
+          57.7052926
+        ]
+      },
+      "id": "node/2163840963"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840964",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9632465,
+          57.7053561
+        ]
+      },
+      "id": "node/2163840964"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840966",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9628963,
+          57.7053632
+        ]
+      },
+      "id": "node/2163840966"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840968",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9632122,
+          57.7054177
+        ]
+      },
+      "id": "node/2163840968"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840974",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.96286,
+          57.7054287
+        ]
+      },
+      "id": "node/2163840974"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163840977",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9631681,
+          57.7054968
+        ]
+      },
+      "id": "node/2163840977"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866809",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9693162,
+          57.7046301
+        ]
+      },
+      "id": "node/2163866809"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866814",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.969236,
+          57.7047715
+        ]
+      },
+      "id": "node/2163866814"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866817",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9691578,
+          57.704938
+        ]
+      },
+      "id": "node/2163866817"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866820",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9691148,
+          57.7050187
+        ]
+      },
+      "id": "node/2163866820"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866822",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9690751,
+          57.7050933
+        ]
+      },
+      "id": "node/2163866822"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866823",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9690335,
+          57.7051713
+        ]
+      },
+      "id": "node/2163866823"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866824",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9689942,
+          57.7052452
+        ]
+      },
+      "id": "node/2163866824"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866825",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9689533,
+          57.7053221
+        ]
+      },
+      "id": "node/2163866825"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866826",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9688911,
+          57.7054447
+        ]
+      },
+      "id": "node/2163866826"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866827",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9688514,
+          57.7055181
+        ]
+      },
+      "id": "node/2163866827"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866828",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9688141,
+          57.705587
+        ]
+      },
+      "id": "node/2163866828"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866829",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9687749,
+          57.7056594
+        ]
+      },
+      "id": "node/2163866829"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866830",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9687349,
+          57.7057334
+        ]
+      },
+      "id": "node/2163866830"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866831",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9686966,
+          57.7058041
+        ]
+      },
+      "id": "node/2163866831"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866832",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9685916,
+          57.7060127
+        ]
+      },
+      "id": "node/2163866832"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866833",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9685548,
+          57.7060828
+        ]
+      },
+      "id": "node/2163866833"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866834",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9685142,
+          57.7061602
+        ]
+      },
+      "id": "node/2163866834"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866835",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9684775,
+          57.70623
+        ]
+      },
+      "id": "node/2163866835"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866836",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9680342,
+          57.7071096
+        ]
+      },
+      "id": "node/2163866836"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866837",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9680029,
+          57.707163
+        ]
+      },
+      "id": "node/2163866837"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866838",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9678997,
+          57.707371
+        ]
+      },
+      "id": "node/2163866838"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866839",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9678428,
+          57.7074808
+        ]
+      },
+      "id": "node/2163866839"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866840",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9677591,
+          57.7076443
+        ]
+      },
+      "id": "node/2163866840"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866841",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9677331,
+          57.7076972
+        ]
+      },
+      "id": "node/2163866841"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866842",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9721901,
+          57.7077671
+        ]
+      },
+      "id": "node/2163866842"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866843",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9677001,
+          57.7077573
+        ]
+      },
+      "id": "node/2163866843"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866844",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9722653,
+          57.7077761
+        ]
+      },
+      "id": "node/2163866844"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866845",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.972345,
+          57.7077897
+        ]
+      },
+      "id": "node/2163866845"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866852",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9720699,
+          57.7078001
+        ]
+      },
+      "id": "node/2163866852"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866855",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree",
+        "start_date": "2013"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9724174,
+          57.7078021
+        ]
+      },
+      "id": "node/2163866855"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866857",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.97249,
+          57.7078146
+        ]
+      },
+      "id": "node/2163866857"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866860",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9676741,
+          57.7078035
+        ]
+      },
+      "id": "node/2163866860"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866862",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9725634,
+          57.7078272
+        ]
+      },
+      "id": "node/2163866862"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866865",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9720361,
+          57.7078357
+        ]
+      },
+      "id": "node/2163866865"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866867",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9726363,
+          57.7078397
+        ]
+      },
+      "id": "node/2163866867"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866870",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9676486,
+          57.7078575
+        ]
+      },
+      "id": "node/2163866870"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866872",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9726216,
+          57.7078625
+        ]
+      },
+      "id": "node/2163866872"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866875",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9720235,
+          57.70787
+        ]
+      },
+      "id": "node/2163866875"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866877",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9726064,
+          57.7078904
+        ]
+      },
+      "id": "node/2163866877"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866879",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9676231,
+          57.707908
+        ]
+      },
+      "id": "node/2163866879"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866881",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9725932,
+          57.7079145
+        ]
+      },
+      "id": "node/2163866881"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866883",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9725702,
+          57.7079567
+        ]
+      },
+      "id": "node/2163866883"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866885",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9675951,
+          57.7079716
+        ]
+      },
+      "id": "node/2163866885"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866887",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9725506,
+          57.7079928
+        ]
+      },
+      "id": "node/2163866887"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866890",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9675621,
+          57.7080311
+        ]
+      },
+      "id": "node/2163866890"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866892",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9675236,
+          57.7081067
+        ]
+      },
+      "id": "node/2163866892"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866895",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9675016,
+          57.7081484
+        ]
+      },
+      "id": "node/2163866895"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866897",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9674741,
+          57.7082026
+        ]
+      },
+      "id": "node/2163866897"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866898",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9674496,
+          57.7082491
+        ]
+      },
+      "id": "node/2163866898"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866899",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9674186,
+          57.7083042
+        ]
+      },
+      "id": "node/2163866899"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866900",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9673971,
+          57.7083573
+        ]
+      },
+      "id": "node/2163866900"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866906",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9673651,
+          57.70841
+        ]
+      },
+      "id": "node/2163866906"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866909",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9673376,
+          57.7084564
+        ]
+      },
+      "id": "node/2163866909"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866912",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9673091,
+          57.7085083
+        ]
+      },
+      "id": "node/2163866912"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866914",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9672701,
+          57.7085951
+        ]
+      },
+      "id": "node/2163866914"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866917",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9672431,
+          57.7086568
+        ]
+      },
+      "id": "node/2163866917"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866919",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9672015,
+          57.7087383
+        ]
+      },
+      "id": "node/2163866919"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866922",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9671735,
+          57.7087776
+        ]
+      },
+      "id": "node/2163866922"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866925",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.967142,
+          57.7088355
+        ]
+      },
+      "id": "node/2163866925"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866927",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9671185,
+          57.7088799
+        ]
+      },
+      "id": "node/2163866927"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866930",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.967086,
+          57.708929
+        ]
+      },
+      "id": "node/2163866930"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866932",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.966963,
+          57.7091701
+        ]
+      },
+      "id": "node/2163866932"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866934",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.966919,
+          57.7092446
+        ]
+      },
+      "id": "node/2163866934"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2163866935",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9668815,
+          57.7093248
+        ]
+      },
+      "id": "node/2163866935"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628751920",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9618368,
+          57.7103835
+        ]
+      },
+      "id": "node/5628751920"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753921",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9621538,
+          57.7101686
+        ]
+      },
+      "id": "node/5628753921"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753922",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9622182,
+          57.7101113
+        ]
+      },
+      "id": "node/5628753922"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753923",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9622959,
+          57.7100532
+        ]
+      },
+      "id": "node/5628753923"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753924",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9618891,
+          57.7100897
+        ]
+      },
+      "id": "node/5628753924"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753925",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9619575,
+          57.7100546
+        ]
+      },
+      "id": "node/5628753925"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753926",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9614117,
+          57.7100116
+        ]
+      },
+      "id": "node/5628753926"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753927",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9615243,
+          57.7099608
+        ]
+      },
+      "id": "node/5628753927"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753928",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9615914,
+          57.7099257
+        ]
+      },
+      "id": "node/5628753928"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753929",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.961645,
+          57.7098791
+        ]
+      },
+      "id": "node/5628753929"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753930",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.96205,
+          57.7099579
+        ]
+      },
+      "id": "node/5628753930"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753931",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9617054,
+          57.7098275
+        ]
+      },
+      "id": "node/5628753931"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753932",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9616377,
+          57.7096172
+        ]
+      },
+      "id": "node/5628753932"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753933",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9615136,
+          57.70951
+        ]
+      },
+      "id": "node/5628753933"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753934",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9613363,
+          57.7093559
+        ]
+      },
+      "id": "node/5628753934"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753935",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9617081,
+          57.7097523
+        ]
+      },
+      "id": "node/5628753935"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753936",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9615956,
+          57.7095825
+        ]
+      },
+      "id": "node/5628753936"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753937",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9614633,
+          57.7094688
+        ]
+      },
+      "id": "node/5628753937"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753938",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9613812,
+          57.7093915
+        ]
+      },
+      "id": "node/5628753938"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753939",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9612461,
+          57.7092724
+        ]
+      },
+      "id": "node/5628753939"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753944",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9612363,
+          57.7088786
+        ]
+      },
+      "id": "node/5628753944"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753945",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9613274,
+          57.7089578
+        ]
+      },
+      "id": "node/5628753945"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753946",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9614238,
+          57.7090291
+        ]
+      },
+      "id": "node/5628753946"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753947",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9615043,
+          57.7091036
+        ]
+      },
+      "id": "node/5628753947"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753948",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9615888,
+          57.7091853
+        ]
+      },
+      "id": "node/5628753948"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753949",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9616855,
+          57.7092599
+        ]
+      },
+      "id": "node/5628753949"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753950",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9617832,
+          57.7093379
+        ]
+      },
+      "id": "node/5628753950"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753951",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.961869,
+          57.7094189
+        ]
+      },
+      "id": "node/5628753951"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753952",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9619643,
+          57.709502
+        ]
+      },
+      "id": "node/5628753952"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753953",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9620675,
+          57.7095836
+        ]
+      },
+      "id": "node/5628753953"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753960",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9634391,
+          57.7103523
+        ]
+      },
+      "id": "node/5628753960"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753961",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9633416,
+          57.710315
+        ]
+      },
+      "id": "node/5628753961"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753962",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9632362,
+          57.7102797
+        ]
+      },
+      "id": "node/5628753962"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753963",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9631385,
+          57.7102439
+        ]
+      },
+      "id": "node/5628753963"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753964",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9630392,
+          57.7102072
+        ]
+      },
+      "id": "node/5628753964"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753965",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9627256,
+          57.710095
+        ]
+      },
+      "id": "node/5628753965"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753966",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9626339,
+          57.7100601
+        ]
+      },
+      "id": "node/5628753966"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753967",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9627274,
+          57.7099117
+        ]
+      },
+      "id": "node/5628753967"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753968",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9628426,
+          57.7099457
+        ]
+      },
+      "id": "node/5628753968"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753969",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9629641,
+          57.7099871
+        ]
+      },
+      "id": "node/5628753969"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753970",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9630764,
+          57.7100312
+        ]
+      },
+      "id": "node/5628753970"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753971",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9632066,
+          57.7100778
+        ]
+      },
+      "id": "node/5628753971"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753972",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9633325,
+          57.7101226
+        ]
+      },
+      "id": "node/5628753972"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753973",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9634616,
+          57.7101629
+        ]
+      },
+      "id": "node/5628753973"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753974",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9635928,
+          57.7102081
+        ]
+      },
+      "id": "node/5628753974"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753975",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.963717,
+          57.7102655
+        ]
+      },
+      "id": "node/5628753975"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753976",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9638672,
+          57.7103119
+        ]
+      },
+      "id": "node/5628753976"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5628753978",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9639963,
+          57.710365
+        ]
+      },
+      "id": "node/5628753978"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9388680284",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9704428,
+          57.7046503
+        ]
+      },
+      "id": "node/9388680284"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9655394917",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9723308,
+          57.7086098
+        ]
+      },
+      "id": "node/9655394917"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9655394918",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9722806,
+          57.7086051
+        ]
+      },
+      "id": "node/9655394918"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9655394919",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9723291,
+          57.708533
+        ]
+      },
+      "id": "node/9655394919"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9655394920",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9721941,
+          57.7085636
+        ]
+      },
+      "id": "node/9655394920"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9655394921",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9718264,
+          57.7086488
+        ]
+      },
+      "id": "node/9655394921"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9655394922",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9719381,
+          57.7086151
+        ]
+      },
+      "id": "node/9655394922"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9655394923",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9720737,
+          57.7085901
+        ]
+      },
+      "id": "node/9655394923"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9915109305",
+        "denotation": "urban",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9655835,
+          57.7047979
+        ]
+      },
+      "id": "node/9915109305"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9947244993",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9643815,
+          57.7046326
+        ]
+      },
+      "id": "node/9947244993"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10043359894",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9718208,
+          57.7094186
+        ]
+      },
+      "id": "node/10043359894"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10043359895",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9720794,
+          57.7090208
+        ]
+      },
+      "id": "node/10043359895"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10043359896",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9718599,
+          57.7090269
+        ]
+      },
+      "id": "node/10043359896"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10043359897",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9717933,
+          57.7088985
+        ]
+      },
+      "id": "node/10043359897"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10043359898",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.971764,
+          57.7089519
+        ]
+      },
+      "id": "node/10043359898"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10043359899",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9716169,
+          57.7089294
+        ]
+      },
+      "id": "node/10043359899"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10043359900",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9716499,
+          57.7088728
+        ]
+      },
+      "id": "node/10043359900"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10043359901",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.972177,
+          57.7088594
+        ]
+      },
+      "id": "node/10043359901"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10043359902",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.971536,
+          57.7095133
+        ]
+      },
+      "id": "node/10043359902"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10043359903",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9716968,
+          57.7095372
+        ]
+      },
+      "id": "node/10043359903"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10043359904",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9625961,
+          57.7077345
+        ]
+      },
+      "id": "node/10043359904"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10043359905",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9624045,
+          57.7077035
+        ]
+      },
+      "id": "node/10043359905"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10043359906",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9621955,
+          57.7076701
+        ]
+      },
+      "id": "node/10043359906"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10043362021",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9731452,
+          57.7054503
+        ]
+      },
+      "id": "node/10043362021"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10043362057",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9730512,
+          57.7052164
+        ]
+      },
+      "id": "node/10043362057"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10043362058",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9731048,
+          57.7053643
+        ]
+      },
+      "id": "node/10043362058"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10046650388",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9624966,
+          57.7077393
+        ]
+      },
+      "id": "node/10046650388"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10046650414",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.962262,
+          57.7076968
+        ]
+      },
+      "id": "node/10046650414"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10046655028",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9732658,
+          57.7051831
+        ]
+      },
+      "id": "node/10046655028"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10046655029",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9734483,
+          57.7051708
+        ]
+      },
+      "id": "node/10046655029"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10046655030",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9732834,
+          57.7054123
+        ]
+      },
+      "id": "node/10046655030"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10046655035",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9626567,
+          57.7076607
+        ]
+      },
+      "id": "node/10046655035"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10046655036",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9627531,
+          57.7075456
+        ]
+      },
+      "id": "node/10046655036"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10046655038",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9623796,
+          57.7073643
+        ]
+      },
+      "id": "node/10046655038"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10046655039",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9631104,
+          57.7077824
+        ]
+      },
+      "id": "node/10046655039"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10046655040",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9627108,
+          57.7077809
+        ]
+      },
+      "id": "node/10046655040"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10054496333",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9732727,
+          57.7052314
+        ]
+      },
+      "id": "node/10054496333"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10054496334",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9731293,
+          57.7048537
+        ]
+      },
+      "id": "node/10054496334"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10054496335",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9731402,
+          57.7048291
+        ]
+      },
+      "id": "node/10054496335"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10054496336",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.973142,
+          57.7049922
+        ]
+      },
+      "id": "node/10054496336"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10054496337",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9733227,
+          57.7049251
+        ]
+      },
+      "id": "node/10054496337"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10054496338",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9733514,
+          57.7047567
+        ]
+      },
+      "id": "node/10054496338"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10067445786",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9639531,
+          57.7083614
+        ]
+      },
+      "id": "node/10067445786"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10067445787",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9640107,
+          57.7083347
+        ]
+      },
+      "id": "node/10067445787"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10067445788",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9622942,
+          57.7074456
+        ]
+      },
+      "id": "node/10067445788"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10836469903",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9731246,
+          57.7047264
+        ]
+      },
+      "id": "node/10836469903"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10836469904",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9731315,
+          57.7046236
+        ]
+      },
+      "id": "node/10836469904"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10838189929",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9737216,
+          57.7052877
+        ]
+      },
+      "id": "node/10838189929"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10860729939",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9736167,
+          57.704769
+        ]
+      },
+      "id": "node/10860729939"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10860729940",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9732113,
+          57.7053036
+        ]
+      },
+      "id": "node/10860729940"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10860729941",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9732902,
+          57.7055292
+        ]
+      },
+      "id": "node/10860729941"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10860729948",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9733712,
+          57.704896
+        ]
+      },
+      "id": "node/10860729948"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10860729952",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.971499,
+          57.7093611
+        ]
+      },
+      "id": "node/10860729952"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10860729953",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9715163,
+          57.7093157
+        ]
+      },
+      "id": "node/10860729953"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10865688541",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9644851,
+          57.7046254
+        ]
+      },
+      "id": "node/10865688541"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10865688542",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9646381,
+          57.7046783
+        ]
+      },
+      "id": "node/10865688542"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10865688543",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9649638,
+          57.7047193
+        ]
+      },
+      "id": "node/10865688543"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10865688544",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9648306,
+          57.7046996
+        ]
+      },
+      "id": "node/10865688544"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10865688545",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9661543,
+          57.704717
+        ]
+      },
+      "id": "node/10865688545"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10865688547",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9644459,
+          57.7068061
+        ]
+      },
+      "id": "node/10865688547"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10914435748",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9686211,
+          57.7059565
+        ]
+      },
+      "id": "node/10914435748"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10939733998",
+        "denotation": "urban",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9654667,
+          57.7047868
+        ]
+      },
+      "id": "node/10939733998"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10989372599",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.971549,
+          57.7097037
+        ]
+      },
+      "id": "node/10989372599"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11091400406",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9658204,
+          57.7048514
+        ]
+      },
+      "id": "node/11091400406"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11867361910",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.973606,
+          57.7053359
+        ]
+      },
+      "id": "node/11867361910"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12010098913",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.973666,
+          57.7054062
+        ]
+      },
+      "id": "node/12010098913"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12055281494",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9717195,
+          57.7090013
+        ]
+      },
+      "id": "node/12055281494"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12055281495",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9714121,
+          57.7094894
+        ]
+      },
+      "id": "node/12055281495"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12055281496",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9719302,
+          57.7089119
+        ]
+      },
+      "id": "node/12055281496"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12055281497",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9718916,
+          57.7089708
+        ]
+      },
+      "id": "node/12055281497"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12055281506",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9708473,
+          57.708805
+        ]
+      },
+      "id": "node/12055281506"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12055281507",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9707787,
+          57.70887
+        ]
+      },
+      "id": "node/12055281507"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12055281508",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9707201,
+          57.7089309
+        ]
+      },
+      "id": "node/12055281508"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12057276064",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9732324,
+          57.7046844
+        ]
+      },
+      "id": "node/12057276064"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12080252062",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9661889,
+          57.704637
+        ]
+      },
+      "id": "node/12080252062"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12080252063",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9690853,
+          57.7068486
+        ]
+      },
+      "id": "node/12080252063"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12092824807",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9617555,
+          57.7055746
+        ]
+      },
+      "id": "node/12092824807"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12092824808",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9617619,
+          57.7055102
+        ]
+      },
+      "id": "node/12092824808"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12114033210",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9688706,
+          57.7067185
+        ]
+      },
+      "id": "node/12114033210"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12149034586",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9616288,
+          57.7055516
+        ]
+      },
+      "id": "node/12149034586"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12149034587",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9640972,
+          57.7084181
+        ]
+      },
+      "id": "node/12149034587"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12149034598",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9617721,
+          57.7097365
+        ]
+      },
+      "id": "node/12149034598"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12149034599",
+        "denotation": "avenue",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9617296,
+          57.7096935
+        ]
+      },
+      "id": "node/12149034599"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12182193622",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9693834,
+          57.7068799
+        ]
+      },
+      "id": "node/12182193622"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12182193623",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9693256,
+          57.7068457
+        ]
+      },
+      "id": "node/12182193623"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12200840776",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9712215,
+          57.7072757
+        ]
+      },
+      "id": "node/12200840776"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12200840777",
+        "leaf_cycle": "deciduous",
+        "leaf_type": "broadleaved",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9713363,
+          57.7072897
+        ]
+      },
+      "id": "node/12200840777"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12210503060",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9710769,
+          57.7085419
+        ]
+      },
+      "id": "node/12210503060"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12210503061",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9711258,
+          57.7084663
+        ]
+      },
+      "id": "node/12210503061"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12210503062",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9711533,
+          57.7084233
+        ]
+      },
+      "id": "node/12210503062"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12210503063",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9711888,
+          57.7083646
+        ]
+      },
+      "id": "node/12210503063"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12210503064",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9712261,
+          57.708304
+        ]
+      },
+      "id": "node/12210503064"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12210503065",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9712619,
+          57.708245
+        ]
+      },
+      "id": "node/12210503065"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12210503066",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9706521,
+          57.7089943
+        ]
+      },
+      "id": "node/12210503066"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12297054320",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9692413,
+          57.7067777
+        ]
+      },
+      "id": "node/12297054320"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12297054321",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9646024,
+          57.7069612
+        ]
+      },
+      "id": "node/12297054321"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12297054322",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9648324,
+          57.7069922
+        ]
+      },
+      "id": "node/12297054322"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12297054323",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9643554,
+          57.7069217
+        ]
+      },
+      "id": "node/12297054323"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12320870770",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9736805,
+          57.7049337
+        ]
+      },
+      "id": "node/12320870770"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12320870777",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9735208,
+          57.7056361
+        ]
+      },
+      "id": "node/12320870777"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12320870778",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9735209,
+          57.7056544
+        ]
+      },
+      "id": "node/12320870778"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12320870779",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9733439,
+          57.7055764
+        ]
+      },
+      "id": "node/12320870779"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12320870780",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9734925,
+          57.7049734
+        ]
+      },
+      "id": "node/12320870780"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12320870781",
+        "natural": "tree"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9736706,
+          57.704976
+        ]
+      },
+      "id": "node/12320870781"
+    }
+  ]
+}
