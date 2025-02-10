@@ -9,8 +9,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start-server": "node server.js",
-    "start-all": "concurrently \"npm run start-server\" \"npm start\"",
-    "clean-start": "rm -rf node_modules package-lock.json npm-shrinkwrap.json && npm install && npm start"
+    "start-all": "concurrently \"npm run start-server\" \"npm start\""
   },
   "dependencies": {
     "@babel/plugin-proposal-nullish-coalescing-operator": "7.18.6",
