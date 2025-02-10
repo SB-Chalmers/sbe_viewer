@@ -51,6 +51,9 @@ jobs:
 
       - name: TypeScript check
         run: npx tsc --noEmit
+      
+      - name: Clean build directory
+        run: rm -rf build
 
       - name: Build the app
         env:
