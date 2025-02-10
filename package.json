@@ -9,7 +9,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start-server": "node server.js",
-    "start-all": "concurrently \"npm run start-server\" \"npm start\""
+    "start-all": "concurrently \"npm run start-server\" \"npm start\"",
+    "clean-start": "rm -rf node_modules package-lock.json npm-shrinkwrap.json && npm install && npm start"
   },
   "dependencies": {
     "@babel/plugin-proposal-nullish-coalescing-operator": "7.18.6",
@@ -70,6 +71,10 @@
     "react",
     "deck.gl"
   ],
+  "resolutions": {
+    "typescript": "^4.3.0",
+    "react": "^17.0.2"
+  },
   "author": "Sanjay Somanath",
   "license": "MIT",
   "browserslist": {

@@ -62,7 +62,11 @@ gis-viewer-app
    ```
    cd sbe-viewer
    ```
-3. Install the dependencies:
+3. (optional) Remove existing installation dependancies:
+   ```
+   rm -rf node_modules package-lock.json npm-shrinkwrap.json
+   ```
+4. Install the dependencies:
    ```
    npm install
    ```
@@ -74,7 +78,11 @@ npm start
 ```
 This will launch the application in your default web browser.
 
-
+## Clean install and launch
+To do a clean install and run the app after changes to the package
+```
+npm run clean-start
+```
 ## Road map
 The larger idea of this project is to have a starting point for research projects to build on and potentially contribute back. Most research projects require some sort of a data viewer and being in the department of architecture we usually have a need to incorporate GIS data along with 3D geometries.
 
