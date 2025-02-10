@@ -1,3 +1,6 @@
+https://github.com/sb-chalmers/sbe-viewer/workflows/Deploy to GitHub Pages/badge.svg
+
+
 # GIS Viewer Application
 
 ## Overview
