@@ -60,10 +60,11 @@ const generateHBJSONScenegraphLayer = async (position: [number, number, number],
 
     getOrientation: () => [0, 0, 0],
     getScale: () => [1, 1, 1],
-    getColor: [255, 255, 255],
+    getColor: [0, 50, 50, 50],
     sizeScale: 1,
     parameters: {depthTest: true},
-    pickable: true,
+    pickable: false,
+    _shadow: false,
     shadowEnabled: false,
     _lighting: 'pbr',
     onError: (error: any) => console.error('Error loading HBJSON:', error)

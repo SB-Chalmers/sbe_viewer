@@ -1,17 +1,18 @@
-import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useMemo, useCallback, lazy, Suspense } from 'react';
 import DeckGL, { DeckGLRef } from '@deck.gl/react';
 import { MapView, ViewStateChangeParameters } from '@deck.gl/core';
-import LeftDrawer from './LeftDrawer';
-import MapComponent, { MapComponentProps } from './MapComponent';
 import SunlightSlider from './SunlightSlider';
 import { loadGisData, loadTreeData } from '../utils/gisDataLoader';
-import RightDrawer from './RightDrawer';
 import { Layer } from '@deck.gl/core';
 import { generateLighting } from '../utils/lightingEffects';
-import { createLayers } from '../utils/layersConfig'; // <-- new import
+import { createLayers } from '../utils/layersConfig';
 import { DEFAULT_SUNLIGHT_TIME } from '../utils/constants';
+import debounce from 'lodash.debounce';
 
-// Define ViewState interface
+const LeftDrawer = lazy(() => import('./LeftDrawer'));
+const RightDrawer = lazy(() => import('./RightDrawer'));
+const MapComponent = lazy(() => import('./MapComponent'));
+
 interface ViewState {
     longitude: number;
     latitude: number;
@@ -28,9 +29,8 @@ interface LayerWithVisibility extends Layer {
     visible: boolean;
 }
 
-// Initial Map State
 const INITIAL_VIEW_STATE: ViewState = {
-    longitude: 11.9690435, 
+    longitude: 11.9690435,
     latitude: 57.7068985,
     zoom: 15,
     pitch: 45,
@@ -47,13 +47,10 @@ const MapViewer: React.FC = () => {
     const [viewState, setViewState] = useState<ViewState>(INITIAL_VIEW_STATE);
     const deckRef = useRef<DeckGLRef>(null);
 
-    // Memoize state values to avoid unnecessary renders
     const [basemapStyle, setBasemapStyle] = useState('mapbox://styles/mapbox/light-v10');
     const [treeData, setTreeData] = useState<any>(null);
     const [showBasemap, setShowBasemap] = useState(true);
-    
-    const [colorBy, setColorBy] = useState<string>(''); // Set default value to empty string
-
+    const [colorBy, setColorBy] = useState<string>('');
     const [layerVisibility, setLayerVisibility] = useState<{ [key: string]: boolean }>(() => ({
         buildings: true,
         'land-cover': true,
@@ -62,60 +59,47 @@ const MapViewer: React.FC = () => {
         'hbjson-glb-layer': true,
         'tile-3d-layer': true
     }));
-
     const [isDarkMode, setIsDarkMode] = useState(false);
-    
     const [layers, setLayers] = useState<any[]>([]);
+    const [initialLoad, setInitialLoad] = useState(true);
 
     const handleBasemapChange = useCallback((style: string) => {
         setBasemapStyle(style);
     }, []);
 
-    // Theme toggle handler
     const toggleTheme = useCallback(() => {
         setIsDarkMode(prev => {
             const newTheme = !prev;
-            document.documentElement.setAttribute(
-                'data-theme',
-                newTheme ? 'dark' : 'light'
-            );
-            handleBasemapChange(
-                newTheme ? 
-                'mapbox://styles/mapbox/dark-v10' : 
-                'mapbox://styles/mapbox/light-v10'
-            );
+            document.documentElement.setAttribute('data-theme', newTheme ? 'dark' : 'light');
+            handleBasemapChange(newTheme ? 'mapbox://styles/mapbox/dark-v10' : 'mapbox://styles/mapbox/light-v10');
             return newTheme;
         });
     }, [handleBasemapChange]);
 
-    // Initialize theme
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', 'light');
     }, []);
 
-    // Load GIS Data once
     useEffect(() => {
         const fetchData = async () => {
-            if (!gisData) {
-                const data = await loadGisData();
-                setGisData(data);
+            try {
+                const [gisData, treeData] = await Promise.all([loadGisData(), loadTreeData()]);
+                setGisData(gisData);
+                setTreeData(treeData);
+            } catch (error) {
+                console.error('Error loading data:', error);
             }
         };
         fetchData();
-    }, [gisData]);
+    }, []);
 
-    // Load Tree Data once
     useEffect(() => {
-        const fetchTreeData = async () => {
-            if (!treeData) {
-                const data = await loadTreeData();
-                setTreeData(data);
-            }
-        };
-        fetchTreeData();
-    }, [treeData]);
+        if (initialLoad) {
+            setViewState(INITIAL_VIEW_STATE);
+            setInitialLoad(false);
+        }
+    }, [initialLoad]);
 
-    // Handlers: Memoized to prevent unnecessary re-renders
     const handleSliderChange = useCallback((newValue: number) => {
         setSunlightTime(newValue);
     }, []);
@@ -124,11 +108,11 @@ const MapViewer: React.FC = () => {
         setViewState(INITIAL_VIEW_STATE);
     }, []);
 
-    const onViewStateChange = useCallback((params: ViewStateChangeParameters) => {
+    const onViewStateChange = useCallback(debounce((params: ViewStateChangeParameters) => {
         if (params.viewState) {
             setViewState(params.viewState);
         }
-    }, []);
+    }, 300), []);
 
     const handleVisibilityToggle = useCallback((layerId: string) => {
         setLayerVisibility(prevState => ({
@@ -142,14 +126,16 @@ const MapViewer: React.FC = () => {
     }, []);
 
     const handleColorByChange = useCallback((colorBy: string) => {
-        console.log('Color by changed to:', colorBy); // Add this line
-        setColorBy(colorBy); // Update state when colorBy changes
+        console.log('Color by changed to:', colorBy);
+        setColorBy(colorBy);
     }, []);
 
+
+    // not sure if this is needed to trigger the colour change on the building layers
     const handleLayerClick = useCallback((info: any) => {
         // Custom click handler logic
     }, []);
-    
+
     useEffect(() => {
         if (!gisData) return;
         const updateLayers = async () => {
@@ -159,7 +145,6 @@ const MapViewer: React.FC = () => {
         updateLayers();
     }, [gisData, treeData, layerVisibility, handleLayerClick, colorBy]);
 
-    // Consolidated tooltip callback
     const getTooltip = useCallback((info: { object?: any }) => {
         if (!info.object) return null;
         const properties = info.object.properties || {};
@@ -182,14 +167,16 @@ const MapViewer: React.FC = () => {
 
     return (
         <div style={{ display: 'flex', height: '100vh', width: '100vw', overflow: 'hidden' }}>
-            <LeftDrawer 
-                resetView={resetView} 
-                onBasemapChange={handleBasemapChange} 
-                layers={Object.keys(layerVisibility).map(id => ({ id, visible: layerVisibility[id] } as LayerWithVisibility))} 
-                onVisibilityToggle={handleVisibilityToggle} 
-                onColorByChange={handleColorByChange}
-                onAddLayer={handleAddLayer}  // Changed from importDataProps
-            />
+            <Suspense fallback={<div>Loading...</div>}>
+                <LeftDrawer 
+                    resetView={resetView} 
+                    onBasemapChange={handleBasemapChange} 
+                    layers={Object.keys(layerVisibility).map(id => ({ id, visible: layerVisibility[id] } as LayerWithVisibility))} 
+                    onVisibilityToggle={handleVisibilityToggle} 
+                    onColorByChange={handleColorByChange}
+                    onAddLayer={handleAddLayer}
+                />
+            </Suspense>
             <div style={{ flexGrow: 1, position: 'relative' }}>
                 <DeckGL
                     ref={deckRef}
@@ -201,24 +188,22 @@ const MapViewer: React.FC = () => {
                     layers={layers}
                     getTooltip={getTooltip}
                     useDevicePixels={true}
-                    parameters={{ 
-
-                     }}
-                    
                 >
                     {showBasemap && (
-                        <MapComponent 
-                            initialViewState={viewState}
-                            mapboxAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN || ''} // Pass the token as a prop
-                            sunlightTime={sunlightTime}
-                            basemapStyle={basemapStyle}
-                            gisData={gisData}
-                            treeData={treeData}
-                            layerVisibility={layerVisibility}
-                            showBasemap={showBasemap}
-                            treePointsData={treeData} // Using treeData as treePointsData
-                            colorBy={colorBy}
-                        />
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <MapComponent 
+                                initialViewState={INITIAL_VIEW_STATE}
+                                mapboxAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN || ''} 
+                                sunlightTime={sunlightTime}
+                                basemapStyle={basemapStyle}
+                                gisData={gisData}
+                                treeData={treeData}
+                                layerVisibility={layerVisibility}
+                                showBasemap={showBasemap}
+                                treePointsData={treeData}
+                                colorBy={colorBy}
+                            />
+                        </Suspense>
                     )}
                 </DeckGL>
                 <SunlightSlider sunlightTime={sunlightTime} onSliderChange={handleSliderChange} />
@@ -237,7 +222,11 @@ const MapViewer: React.FC = () => {
                     <i className={`fas fa-${isDarkMode ? 'sun' : 'moon'}`}></i>
                 </button>
             </div>
-            {gisData && <RightDrawer geojsonData={gisData} />}
+            {gisData && (
+                <Suspense fallback={<div>Loading...</div>}>
+                    <RightDrawer geojsonData={gisData} />
+                </Suspense>
+            )}
         </div>
     );
 };

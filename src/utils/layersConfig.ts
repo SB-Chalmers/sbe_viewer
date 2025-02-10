@@ -7,16 +7,26 @@ import { create3DTilesLayer } from './layers/3dTiles';
 export const createLayers = async (gisData: any, treeData: any, handleLayerClick: (info: any) => void, colorBy: string) => {
   console.log('Creating layers with colorBy:', colorBy);
   const hbjsonPosition: [number, number, number] = [11.979, 57.707, 0]; // [lon, lat, alt]
-  const layers = [
-    await createBuildingLayer(gisData, handleLayerClick, colorBy),
-    await createLandCoverLayer(gisData),
-    await createTreePointsLayer(treeData),
-    await createTreeLayer(treeData), // Ensure the tree layer is awaited
-    await createHBJSONLayer(hbjsonPosition, 'demo.hbjson') // Add default path
-    //await create3DTilesLayer()
-  ].filter(layer => layer !== null); // Remove any null layers
 
-  console.log('Layers created:', layers);
-  return layers;
+  // Load layers asynchronously
+  const buildingLayerPromise = createBuildingLayer(gisData, handleLayerClick, colorBy);
+  const landCoverLayerPromise = createLandCoverLayer(gisData);
+  const treePointsLayerPromise = createTreePointsLayer(treeData);
+  const treeLayerPromise = createTreeLayer(treeData);
+  const hbjsonLayerPromise = createHBJSONLayer(hbjsonPosition, 'demo.hbjson');
+
+  // Await all promises
+  const layers = await Promise.all([
+    buildingLayerPromise,
+    landCoverLayerPromise,
+    treePointsLayerPromise,
+    treeLayerPromise,
+    hbjsonLayerPromise
+  ]);
+
+  // Filter out any null layers
+  const validLayers = layers.filter(layer => layer !== null);
+
+  console.log('Layers created:', validLayers);
+  return validLayers;
 };
-

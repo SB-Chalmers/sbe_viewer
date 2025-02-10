@@ -11,33 +11,36 @@ export const createTreeLayer = async (data: any, id: string = 'tree-layer') => {
 
   const scenegraph = 'tree.glb'; // Ensure the correct path
 
+  // Precompute random scales and orientations
+  const features = data.features.map((feature: any) => ({
+    ...feature,
+    scale: 0.8 + Math.random() * 0.3, // Scale between 0.8 and 1.1
+    orientation: [0, Math.random() * 10 - 5, 90] // Slight rotation only on Y-axis
+  }));
+
   const layer = new ScenegraphLayer({
       id,
-      data: data.features, // Ensure it's passing an array of features
+      data: features, // Use precomputed features
       scenegraph,
 
       // Set position using geo-coordinates
       getPosition: (d: any) => d.geometry?.coordinates || [0, 0, 0],
 
-      // Fix tree angles by ensuring upright orientation
-      getOrientation: (d: any) => {
-          return [0, Math.random() * 10 - 5, 90]; // Slight rotation only on Y-axis
-      },
+      // Use precomputed orientation
+      getOrientation: (d: any) => d.orientation,
 
-      // Apply natural size variation
-      getScale: (d: any) => {
-          const randomScale = 0.8 + Math.random() * 0.3; // Scale between 0.9 and 1.2
-          return [randomScale, randomScale, randomScale]; 
-      },
+      // Use precomputed scale
+      getScale: (d: any) => [d.scale, d.scale, d.scale],
 
       sizeScale: 1, // Base scale multiplier
 
       // Enable picking interactions
       pickable: false,
-      //getColor: [150, 200, 150, 255], // Default color
 
       // Use realistic PBR lighting
       _lighting: 'pbr',
+      _shadow: false,
+      shadowEnabled: false,
       animation: false,
 
       onError: (error: any) => {
@@ -55,10 +58,11 @@ export const createTreePointsLayer = (data: any, id: string = 'tree-points-layer
         data,
         pointRadiusMinPixels: 2,
         getPointRadius: 4,
-        getFillColor: [0, 200, 0,200],
+        getFillColor: [0, 200, 0, 200],
+        shadowEnabled: false,
         pickable: false,
         getLineWidth: 1,
     });
 };
 
-export{}
+export {}
