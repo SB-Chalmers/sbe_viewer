@@ -27,9 +27,9 @@ const LayerManagementTab: React.FC<LayerManagementTabProps> = ({ layers, onVisib
     const [colorBy, setColorBy] = useState(''); // Set default value to empty string
 
     const predefinedLayers = [
-        { id: 'buildings', name: 'Buildings' },
-        { id: 'land-cover', name: 'Land Cover' },
-        { id: 'tree-layer', name: 'Tree Layer' },
+        { id: 'buildings', name: '3D Buildings' },
+        { id: 'land-cover', name: 'Ground Shadows' },
+        { id: 'tree-layer', name: 'Tree Geometry Layer' },
         { id: 'tree-points-layer', name: 'Tree Points Layer' },
         { id: 'hbjson-glb-layer', name: 'HBJSON Layer' }
     ];

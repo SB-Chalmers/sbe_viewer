@@ -4,10 +4,9 @@ import { MapView, ViewStateChangeParameters } from '@deck.gl/core';
 import SunlightSlider from './SunlightSlider';
 import { loadGisData, loadTreeData } from '../utils/gisDataLoader';
 import { Layer } from '@deck.gl/core';
-import { generateLighting } from '../utils/lightingEffects';
-import { createLayers } from '../utils/layersConfig';
 import { DEFAULT_SUNLIGHT_TIME } from '../utils/constants';
 import debounce from 'lodash.debounce';
+import { getTooltip, getLightingEffects, updateLayers, handleLayerClick, toggleBasemap, toggleTheme } from '../utils/mapUtils';
 
 const LeftDrawer = lazy(() => import('./LeftDrawer'));
 const RightDrawer = lazy(() => import('./RightDrawer'));
@@ -67,14 +66,13 @@ const MapViewer: React.FC = () => {
         setBasemapStyle(style);
     }, []);
 
-    const toggleTheme = useCallback(() => {
-        setIsDarkMode(prev => {
-            const newTheme = !prev;
-            document.documentElement.setAttribute('data-theme', newTheme ? 'dark' : 'light');
-            handleBasemapChange(newTheme ? 'mapbox://styles/mapbox/dark-v10' : 'mapbox://styles/mapbox/light-v10');
-            return newTheme;
-        });
+    const handleToggleTheme = useCallback(() => {
+        toggleTheme(setIsDarkMode, handleBasemapChange);
     }, [handleBasemapChange]);
+
+    const handleToggleBasemap = useCallback(() => {
+        toggleBasemap(setShowBasemap);
+    }, []);
 
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', 'light');
@@ -121,45 +119,21 @@ const MapViewer: React.FC = () => {
         }));
     }, []);
 
-    const toggleBasemap = useCallback(() => {
-        setShowBasemap(prevState => !prevState);
-    }, []);
-
     const handleColorByChange = useCallback((colorBy: string) => {
         console.log('Color by changed to:', colorBy);
         setColorBy(colorBy);
     }, []);
 
-
-    // not sure if this is needed to trigger the colour change on the building layers
-    const handleLayerClick = useCallback((info: any) => {
-        // Custom click handler logic
-    }, []);
-
     useEffect(() => {
         if (!gisData) return;
-        const updateLayers = async () => {
-            const resolvedLayers: any[] = await createLayers(gisData, treeData, handleLayerClick, colorBy);
-            setLayers(resolvedLayers.filter(layer => layer && layerVisibility[(layer as any).id]));
+        const updateLayersAsync = async () => {
+            const layers = await updateLayers(gisData, treeData, handleLayerClick, colorBy, layerVisibility);
+            setLayers(layers);
         };
-        updateLayers();
+        updateLayersAsync();
     }, [gisData, treeData, layerVisibility, handleLayerClick, colorBy]);
 
-    const getTooltip = useCallback((info: { object?: any }) => {
-        if (!info.object) return null;
-        const properties = info.object.properties || {};
-        return {
-            text: [
-                `Name: ${properties.name || 'N/A'}`,
-                `Type: ${properties.type || 'N/A'}`,
-                `Height: ${properties.height || 'N/A'} m`,
-                `Function: ${properties.function || 'N/A'}`,
-                `Floors: ${properties.floors || 'N/A'}`,
-            ].join('\n')
-        };
-    }, []);
-
-    const lightingEffects = useMemo(() => [generateLighting(new Date(sunlightTime))], [sunlightTime]);
+    const lightingEffects = useMemo(() => getLightingEffects(sunlightTime), [sunlightTime]);
 
     const handleAddLayer = useCallback((newLayer: Layer) => {
         setLayers(prevLayers => [...prevLayers, newLayer]);
@@ -209,14 +183,14 @@ const MapViewer: React.FC = () => {
                 <SunlightSlider sunlightTime={sunlightTime} onSliderChange={handleSliderChange} />
                 <button 
                     className={`toggle-map-btn ${showBasemap ? 'active' : ''}`}
-                    onClick={toggleBasemap}
+                    onClick={handleToggleBasemap}
                     title={`${showBasemap ? 'Hide' : 'Show'} basemap`}
                 >
                     <i className="fas fa-map"></i>
                 </button>
                 <button 
                     className="theme-toggle-btn"
-                    onClick={toggleTheme}
+                    onClick={handleToggleTheme}
                     title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
                 >
                     <i className={`fas fa-${isDarkMode ? 'sun' : 'moon'}`}></i>

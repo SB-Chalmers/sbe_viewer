@@ -1,9 +1,8 @@
-import React, { useRef, useEffect, useState, useMemo, useCallback } from 'react';
+import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { Map } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import DeckGL from '@deck.gl/react';
-import { createLayers } from '../utils/layersConfig';
-import { lightingEffect, sun, generateLighting } from '../utils/lightingEffects';
+import { getTooltip, getLightingEffects, updateLayers, handleLayerClick } from '../utils/mapUtils';
 import './PopupComponent.css';
 import Stats from 'stats.js';
 
@@ -42,13 +41,12 @@ const MapComponent: React.FC<MapComponentProps> = ({
     const stats = useRef<Stats | null>(null);
 
     // Memoize lighting effects to prevent re-rendering
-    const [effects, setEffects] = useState([lightingEffect]);
+    const [effects, setEffects] = useState(getLightingEffects(sunlightTime));
 
     // Update light effect when sunlightTime changes
     useEffect(() => {
         if (sunlightTime) {
-            sun.timestamp = sunlightTime;
-            setEffects([generateLighting(new Date(sunlightTime))]);
+            setEffects(getLightingEffects(sunlightTime));
         }
     }, [sunlightTime]);
 
@@ -73,50 +71,26 @@ const MapComponent: React.FC<MapComponentProps> = ({
         }
     }, []);
 
-    // Memoize handleLayerClick
-    const handleLayerClick = useCallback((info: any) => {
-        // Custom click handler logic
-    }, []); // Empty dependency array since it doesn't depend on any props
-
     // Add state for layers
     const [currentLayers, setCurrentLayers] = useState<any[]>([]);
 
     // Replace the layers useMemo with useEffect
     useEffect(() => {
-        const updateLayers = async () => {
+        const updateLayersAsync = async () => {
             if (!gisData) {
                 setCurrentLayers([]);
                 return;
             }
-            
             try {
-                const newLayers = await createLayers(gisData, treeData, handleLayerClick, colorBy);
-                const filteredLayers = (Array.isArray(newLayers) ? newLayers : [])
-                    .filter(layer => layer && layerVisibility[(layer as any).id]);
-                setCurrentLayers(filteredLayers);
+                const layers = await updateLayers(gisData, treeData, handleLayerClick, colorBy, layerVisibility);
+                setCurrentLayers(layers);
             } catch (error) {
                 console.error('Error creating layers:', error);
                 setCurrentLayers([]);
             }
         };
-
-        updateLayers();
+        updateLayersAsync();
     }, [gisData, treeData, layerVisibility, colorBy, handleLayerClick]);
-
-    // Memoize tooltip function to prevent re-renders
-    const getTooltip = useCallback((info: { object?: any }) => {
-        if (!info.object) return null;
-        const properties = info.object.properties || {};
-        return {
-            text: [
-                `Name: ${properties.name || 'N/A'}`,
-                `Type: ${properties.type || 'N/A'}`,
-                `Height: ${properties.height || 'N/A'} m`,
-                `Function: ${properties.function || 'N/A'}`,
-                `Floors: ${properties.floors || 'N/A'}`,
-            ].join('\n')
-        };
-    }, []);
 
     return (
         <div style={{ position: 'relative', width: '100%', height: '100%' }}>
