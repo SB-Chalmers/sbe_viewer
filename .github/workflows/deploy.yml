@@ -21,8 +21,20 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Verify Node.js version
+        run: node --version
+
+      - name: Verify npm version
+        run: npm --version
+
       - name: Verify TypeScript version
         run: npx tsc --version
+
+      - name: Verify React version
+        run: npm list react
+
+      - name: Verify npm packages
+        run: npm list
 
       - name: TypeScript check
         run: npx tsc --noEmit
