@@ -21,6 +21,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Verify TypeScript version
+        run: npx tsc --version
+
+      - name: TypeScript check
+        run: npx tsc --noEmit
+
       - name: Set environment variables
         run: |
           echo "REACT_APP_MAPBOX_ACCESS_TOKEN=${{ secrets.REACT_APP_MAPBOX_ACCESS_TOKEN }}" >> $GITHUB_ENV
