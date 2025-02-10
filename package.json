@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A simple viewer for GIS files with filtering capabilities.",
   "main": "src/App.tsx",
+  "homepage": "https://sb-chalmers.github.io/sbe_viewer",
   "scripts": {
     "deploy" : "gh-pages -d build",
     "start": "react-scripts start",

@@ -51,7 +51,7 @@ jobs:
 
       - name: TypeScript check
         run: npx tsc --noEmit
-      
+
       - name: Clean build directory
         run: rm -rf build
 
