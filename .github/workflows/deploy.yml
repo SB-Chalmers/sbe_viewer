@@ -18,8 +18,16 @@ jobs:
         with:
           node-version: '18.20.6'
 
+      - name: Clear cached dependencies
+        run: |
+          rm -rf node_modules package-lock.json
+          npm cache clean --force
+
       - name: Install dependencies
         run: npm install
+    
+      - name: Prune extraneous packages
+        run: npm prune
 
       - name: Verify Node.js version
         run: node --version
