@@ -63,6 +63,9 @@ jobs:
           GENERATE_SOURCEMAP: ${{ secrets.GENERATE_SOURCEMAP }}
         run: npm run build
 
+      - name: List build directory recursively
+        run: ls -R build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
