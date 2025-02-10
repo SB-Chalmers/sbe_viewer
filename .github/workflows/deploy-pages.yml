@@ -5,54 +5,26 @@ on:
     branches:
       - main  # Trigger the workflow on push to the main branch
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write  # Required for GitHub Pages deployment
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '18.20.6'
-
-      - name: Clear cached dependencies
-        run: |
-          rm -rf node_modules package-lock.json
-          npm cache clean --force
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
-    
-      - name: Prune extraneous packages
-        run: npm prune
-
-      - name: Verify Node.js version
-        run: node --version
-
-      - name: Verify npm version
-        run: npm --version
-
-      - name: Verify TypeScript version
-        run: npx tsc --version
-
-      - name: Verify React version
-        run: npm list react
-
-      - name: Verify npm packages
-        run: npm list
-
-      - name: TypeScript check
-        run: npx tsc --noEmit
-
-      - name: Set environment variables
-        run: |
-          echo "REACT_APP_MAPBOX_ACCESS_TOKEN=${{ secrets.REACT_APP_MAPBOX_ACCESS_TOKEN }}" >> $GITHUB_ENV
-          echo "SKIP_PREFLIGHT_CHECK=${{ secrets.SKIP_PREFLIGHT_CHECK }}" >> $GITHUB_ENV
-          echo "GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}" >> $GITHUB_ENV
-          echo "GENERATE_SOURCEMAP=${{ secrets.GENERATE_SOURCEMAP }}" >> $GITHUB_ENV
 
       - name: Build the app
         env:
@@ -62,15 +34,18 @@ jobs:
           GENERATE_SOURCEMAP: ${{ secrets.GENERATE_SOURCEMAP }}
         run: npm run build
 
-      
-      - name: Deploy
-        run: |
-          git config --global user.name $user_name
-          git config --global user.email $user_email
-          git remote set-url origin https://${github_token}@github.com/${repository}
-          npm run deploy
-        env:
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
-          github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-          repository: ${{ github.repository }}
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./build  # The output directory for GitHub Pages
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: https://sb-chalmers.github.io/sbe_viewer/
+
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
