@@ -1,6 +1,6 @@
 import { GeoJsonLayer } from '@deck.gl/layers';
 import { ScenegraphLayer } from '@deck.gl/mesh-layers';
-
+const basePath = process.env.REACT_APP_BASE_PATH || '';
 export const createTreeLayer = async (data: any, id: string = 'tree-layer') => {
   console.log('Creating Tree Layer with data:', data);
 
@@ -9,7 +9,7 @@ export const createTreeLayer = async (data: any, id: string = 'tree-layer') => {
       return null; // Prevents layer creation if data is invalid
   }
 
-  const scenegraph = 'tree.glb'; // Ensure the correct path
+  const scenegraph = `${basePath}tree.glb`; // Ensure the correct path
 
   // Precompute random scales and orientations
   const features = data.features.map((feature: any) => ({

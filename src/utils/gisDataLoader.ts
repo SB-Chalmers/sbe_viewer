@@ -1,10 +1,9 @@
-// filepath: /d:/GitHub/SBE_viewer/gis-viewer-app/src/utils/gisDataLoader.ts
-// GIS data located at filepath: ../../public/sample-data.geojson
 const basePath = process.env.REACT_APP_BASE_PATH || '';
+
 
 export const loadGisData = async () => {
     try {
-        const response = await fetch(`${basePath}/sample-data.geojson`);
+        const response = await fetch(`${basePath}sample-data.geojson`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -18,7 +17,7 @@ export const loadGisData = async () => {
 
 export const loadTreeData = async () => {
     try {
-        const response = await fetch(`${basePath}/trees.geojson`);
+        const response = await fetch(`${basePath}trees.geojson`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

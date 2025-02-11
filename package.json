@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A simple viewer for HBJSON and GIS files.",
   "main": "src/App.tsx",
+  "private": true,
   "homepage": "https://sb-chalmers.github.io/sbe_viewer",
   "scripts": {
     "deploy" : "gh-pages -d build",

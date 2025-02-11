@@ -9,13 +9,13 @@ const handleResponse = async (response: Response) => {
     throw new Error('Invalid response');
   }
 };
-
+const basePath = process.env.REACT_APP_BASE_PATH || '';
 export const createHBJSONLayer = async (position: [number, number, number], hbjsonPath: string) => {
   console.log('Creating layer for:', hbjsonPath);
   //const glbUrl = await fetchAndConvertHBJSON(hbjsonPath);
 
   /** Give an overwritten placeholder glb url in cachedGLB/demo.glb */
-  const glbUrl = 'cachedGLB/demo.glb';
+  const glbUrl = `${basePath}cachedGLB/demo.glb`;
 
   if (!glbUrl) throw new Error('Conversion failed');
 
