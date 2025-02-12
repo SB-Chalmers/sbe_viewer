@@ -3,28 +3,85 @@ import { Feature, Polygon } from 'geojson';
 import { getColorFromValue } from '../colormapHelpers';
 import {_TerrainExtension as TerrainExtension} from '@deck.gl/extensions';
 
+const extractCoordinates = (obj: any): number[][] => {
+  if (Array.isArray(obj)) {
+    // Check if this array represents a coordinate pair [lng, lat]
+    if (obj.length === 2 && typeof obj[0] === 'number' && typeof obj[1] === 'number') {
+      return [obj];
+    }
+    // Recursively process array elements
+    return obj.flatMap(item => extractCoordinates(item));
+  }
+  
+  if (obj && typeof obj === 'object') {
+    // If this is a GeoJSON object, focus on the coordinates property
+    if (obj.type && obj.coordinates) {
+      return extractCoordinates(obj.coordinates);
+    }
+    // For features array or other objects, process all values
+    return Object.values(obj).flatMap(value => extractCoordinates(value));
+  }
+  
+  return [];
+};
+
 const generateBoundingBox = (data: any): Feature<Polygon> => {
-  const coordinates = data.features.flatMap((feature: any) => feature.geometry.coordinates.flat());
-  const lats = coordinates.map((coord: any) => coord[1]);
-  const lngs = coordinates.map((coord: any) => coord[0]);
-  const minLat = Math.min(...lats);
-  const maxLat = Math.max(...lats);
+
+  const emptyBoundingBox: Feature<Polygon> = {
+    type: "Feature",
+    geometry: {
+      type: "Polygon",
+      coordinates: [[
+        [0, 0],
+        [0, 0],
+        [0, 0],
+        [0, 0],
+        [0, 0]
+      ]]
+    },
+    properties: {
+      isFloor: true,
+      footprint_extrusion: 0,
+      isError: true // Add flag to indicate this is an error case
+    }
+  };
+
+
+  if (!data) {
+    console.error('No data provided');
+    return emptyBoundingBox;
+  }
+
+  // Extract all coordinates from the data structure
+  const coordinates = extractCoordinates(data);
+  
+  if (coordinates.length === 0) {
+    console.error('No valid coordinates found in data');
+    return emptyBoundingBox;
+  }
+
+  // Calculate bounds
+  const lngs = coordinates.map(coord => coord[0]);
+  const lats = coordinates.map(coord => coord[1]);
+  
   const minLng = Math.min(...lngs);
   const maxLng = Math.max(...lngs);
+  const minLat = Math.min(...lats);
+  const maxLat = Math.max(...lats);
+
+  console.log('Bounding box coordinates:', { minLng, maxLng, minLat, maxLat });
 
   return {
     type: "Feature",
     geometry: {
       type: "Polygon",
-      coordinates: [
-        [
-          [minLng, minLat],
-          [maxLng, minLat],
-          [maxLng, maxLat],
-          [minLng, maxLat],
-          [minLng, minLat]
-        ]
-      ]
+      coordinates: [[
+        [minLng, minLat],
+        [maxLng, minLat],
+        [maxLng, maxLat],
+        [minLng, maxLat],
+        [minLng, minLat]
+      ]]
     },
     properties: {
       isFloor: true,
@@ -48,7 +105,7 @@ export const createBuildingLayer = (
     id: "buildings",
     data: gisData,
     extruded: true,
-    wireframe: true,
+    wireframe: false,
     opacity: 1,
     getElevation: (f: any) => f.properties.height || 0,
     getFillColor: (d: any) => {
@@ -59,13 +116,13 @@ export const createBuildingLayer = (
       const isCategorical = typeof value === "string";
       return getColorFromValue(value, colorBy, isCategorical, min, max);
     },
-    _shadows: true,
-    shadowEnabled: true,
+    _shadows: false,
+    shadowEnabled: false,
     autoHighlight: true,
-    highlightColor: [200, 200, 0, 100],
+    highlightColor: [191, 0, 115, 100],
     pickable: true,
-    //extensions: [new TerrainExtension()],
-    parameters: { depthTest: true },
+    extensions: [new TerrainExtension()],
+    //parameters: { depthTest: true },
     onClick: handleLayerClick,
     updateTriggers: {
       getFillColor: colorBy,
@@ -76,17 +133,17 @@ export const createBuildingLayer = (
 
 export const createLandCoverLayer = (gisData: any) => {
   const landCover = generateBoundingBox(gisData);
+  console.log('Creating Land Cover Layer with data:', landCover);
   return new GeoJsonLayer({
     id: "land-cover",
     data: landCover,
     getFillColor: [0, 0, 0, 0],
     getLineColor: [0, 0, 0, 0],
-    stroked: false,
-    filled: true,
     _shadows: false,
-    shadowEnabled: false,
+    // extensions: [new TerrainExtension()],
+    shadowEnabled: true,
     pickable: false
   });
 };
 
-export { generateBoundingBox };
+export {};

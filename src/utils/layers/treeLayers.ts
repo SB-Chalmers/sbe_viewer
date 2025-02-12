@@ -1,7 +1,8 @@
 import { GeoJsonLayer } from '@deck.gl/layers';
 import { ScenegraphLayer } from '@deck.gl/mesh-layers';
-import { getColorFromValue } from '../colormapHelpers';
 import {_TerrainExtension as TerrainExtension} from '@deck.gl/extensions';
+
+
 const basePath = process.env.REACT_APP_BASE_PATH || '';
 export const createTreeLayer = async (data: any, id: string = 'tree-layer') => {
   console.log('Creating Tree Layer with data:', data);
@@ -24,25 +25,20 @@ export const createTreeLayer = async (data: any, id: string = 'tree-layer') => {
       id,
       data: features, // Use precomputed features
       scenegraph,
-
       // Set position using geo-coordinates
       getPosition: (d: any) => d.geometry?.coordinates || [0, 0, 0],
-
       // Use precomputed orientation
       getOrientation: (d: any) => d.orientation,
-
       // Use precomputed scale
       getScale: (d: any) => [d.scale, d.scale, d.scale],
-
-      sizeScale: 1, // Base scale multiplier
-
+      sizeScale: 0.8, // Base scale multiplier
       // Enable picking interactions
       pickable: false,
 
       // Use realistic PBR lighting
       _lighting: 'pbr',
-      //extensions: [new TerrainExtension()],
-      _shadow: false,
+      extensions: [new TerrainExtension()],
+      _shadow: true,
       shadowEnabled: false,
       animation: false,
 

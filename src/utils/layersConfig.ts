@@ -2,7 +2,7 @@
 import { createTreeLayer, createTreePointsLayer } from './layers/treeLayers';
 import { createBuildingLayer, createLandCoverLayer } from './layers/buildingLayers';
 import { createHBJSONLayer } from './layers/hbjsonLayer';
-import { create3DTilesLayer, createMaskLayer } from './layers/3dTiles';
+import { create3DTilesLayer } from './layers/3dTiles';
 
 const basePath = process.env.REACT_APP_BASE_PATH || '';
 
@@ -19,19 +19,15 @@ export const createLayers = async (gisData: any, treeData: any, handleLayerClick
   const treeLayerPromise = createTreeLayer(treeData);
   const hbjsonLayerPromise = createHBJSONLayer(hbjsonPosition, `${basePath}demo.hbjson`);
   const tile3dLayerPromise = create3DTilesLayer();
-  const maskLayerPromise = createMaskLayer(gisData);
 
   // Await all promises
   const layers = await Promise.all([
-    
-    
+    tile3dLayerPromise,
+    landCoverLayerPromise,
     hbjsonLayerPromise,
     buildingLayerPromise,
-    //tile3dLayerPromise,
     treePointsLayerPromise,
     treeLayerPromise,
-    //maskLayerPromise,
-    landCoverLayerPromise,
   ]);
 
   // Filter out any null layers

@@ -1,6 +1,6 @@
 import { ScenegraphLayer } from '@deck.gl/mesh-layers';
 import { hbjsonToGLB } from '../hbjsonHelpers';
-import {_TerrainExtension as TerrainExtension} from '@deck.gl/extensions';
+//import {_TerrainExtension as TerrainExtension} from '@deck.gl/extensions';
 
 const handleResponse = async (response: Response) => {
   const text = await response.text();

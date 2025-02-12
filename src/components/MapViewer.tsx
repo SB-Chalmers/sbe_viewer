@@ -56,8 +56,8 @@ const MapViewer: React.FC = () => {
         'land-cover': true,
         'tree-layer': true,
         'tree-points-layer': true,
-        'hbjson-glb-layer': true,
-        'tile-3d-layer': true
+        'hbjson-glb-layer': false,
+        'tile-3d-layer': false
     }));
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [layers, setLayers] = useState<any[]>([]);
