@@ -8,6 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: process.env.NODE_ENV === 'production' ? '/sbe_viewer/' : '/'
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],

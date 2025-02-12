@@ -1,6 +1,8 @@
 {
   "name": "sbe-viewer",
   "version": "0.0.1",
+  "private": true,
+  "homepage": "https://sb-chalmers.github.io/sbe_viewer",
   "description": "A simple viewer for GIS files with filtering capabilities.",
   "main": "src/App.tsx",
   "scripts": {
