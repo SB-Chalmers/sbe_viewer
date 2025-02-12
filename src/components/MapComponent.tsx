@@ -96,7 +96,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
         <div style={{ position: 'relative', width: '100%', height: '100%' }}>
             <DeckGL
                 initialViewState={initialViewState}
-                controller={true}
+                controller={{touchRotate: true, inertia: 250}}
                 layers={currentLayers}
                 effects={effects} // Ensure this is updated
                 getTooltip={getTooltip}

@@ -1,6 +1,7 @@
 import { GeoJsonLayer } from '@deck.gl/layers';
 import { Feature, Polygon } from 'geojson';
 import { getColorFromValue } from '../colormapHelpers';
+import {_TerrainExtension as TerrainExtension} from '@deck.gl/extensions';
 
 const generateBoundingBox = (data: any): Feature<Polygon> => {
   const coordinates = data.features.flatMap((feature: any) => feature.geometry.coordinates.flat());
@@ -60,7 +61,10 @@ export const createBuildingLayer = (
     },
     _shadows: true,
     shadowEnabled: true,
+    autoHighlight: true,
+    highlightColor: [200, 200, 0, 100],
     pickable: true,
+    //extensions: [new TerrainExtension()],
     parameters: { depthTest: true },
     onClick: handleLayerClick,
     updateTriggers: {
@@ -77,10 +81,12 @@ export const createLandCoverLayer = (gisData: any) => {
     data: landCover,
     getFillColor: [0, 0, 0, 0],
     getLineColor: [0, 0, 0, 0],
+    stroked: false,
+    filled: true,
     _shadows: false,
     shadowEnabled: false,
     pickable: false
   });
 };
 
-export {}
+export { generateBoundingBox };

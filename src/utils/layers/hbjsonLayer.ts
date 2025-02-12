@@ -1,5 +1,6 @@
 import { ScenegraphLayer } from '@deck.gl/mesh-layers';
 import { hbjsonToGLB } from '../hbjsonHelpers';
+import {_TerrainExtension as TerrainExtension} from '@deck.gl/extensions';
 
 const handleResponse = async (response: Response) => {
   const text = await response.text();
@@ -60,12 +61,15 @@ const generateHBJSONScenegraphLayer = async (position: [number, number, number],
 
     getOrientation: () => [0, 0, 0],
     getScale: () => [1, 1, 1],
-    getColor: [0, 50, 50, 50],
+    //extensions: [new TerrainExtension()],
+    //getColor: [0, 50, 50, 50],
     sizeScale: 1,
     parameters: {depthTest: true},
-    pickable: false,
-    _shadow: false,
-    shadowEnabled: false,
+    pickable: true,
+    autoHighlight: true,
+    highlightColor: [0, 200, 255, 50],
+    _shadow: true,
+    shadowEnabled: true,
     _lighting: 'pbr',
     onError: (error: any) => console.error('Error loading HBJSON:', error)
   });

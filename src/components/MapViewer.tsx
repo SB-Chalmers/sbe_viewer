@@ -8,6 +8,7 @@ import { DEFAULT_SUNLIGHT_TIME } from '../utils/constants';
 import debounce from 'lodash.debounce';
 import { getTooltip, getLightingEffects, updateLayers, handleLayerClick, toggleBasemap, toggleTheme } from '../utils/mapUtils';
 
+
 const LeftDrawer = lazy(() => import('./LeftDrawer'));
 const RightDrawer = lazy(() => import('./RightDrawer'));
 const MapComponent = lazy(() => import('./MapComponent'));
@@ -29,8 +30,8 @@ interface LayerWithVisibility extends Layer {
 }
 
 const INITIAL_VIEW_STATE: ViewState = {
-    longitude: 11.9690435,
-    latitude: 57.7068985,
+    longitude: 11.906021781151582,
+    latitude: 57.71879724881195,
     zoom: 15,
     pitch: 45,
     bearing: 0,
@@ -155,6 +156,7 @@ const MapViewer: React.FC = () => {
                 <DeckGL
                     ref={deckRef}
                     views={new MapView({ id: 'main', controller: true })}
+                    controller={{touchRotate: true, inertia: 250}}
                     viewState={viewState}
                     onViewStateChange={onViewStateChange}
                     style={{ backgroundColor: 'transparent', height: '100%', width: '100%' }}

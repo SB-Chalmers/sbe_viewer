@@ -2,13 +2,15 @@
 import { createTreeLayer, createTreePointsLayer } from './layers/treeLayers';
 import { createBuildingLayer, createLandCoverLayer } from './layers/buildingLayers';
 import { createHBJSONLayer } from './layers/hbjsonLayer';
-import { create3DTilesLayer } from './layers/3dTiles';
+import { create3DTilesLayer, createMaskLayer } from './layers/3dTiles';
 
 const basePath = process.env.REACT_APP_BASE_PATH || '';
 
 export const createLayers = async (gisData: any, treeData: any, handleLayerClick: (info: any) => void, colorBy: string) => {
   console.log('Creating layers with colorBy:', colorBy);
-  const hbjsonPosition: [number, number, number] = [11.979, 57.707, 0]; // [lon, lat, alt]
+  // 11.906021781151582,
+  // 57.71879724881195,
+  const hbjsonPosition: [number, number, number] = [11.89645, 57.7122, 0]; // [lon, lat, alt]
 
   // Load layers asynchronously
   const buildingLayerPromise = createBuildingLayer(gisData, handleLayerClick, colorBy);
@@ -17,14 +19,18 @@ export const createLayers = async (gisData: any, treeData: any, handleLayerClick
   const treeLayerPromise = createTreeLayer(treeData);
   const hbjsonLayerPromise = createHBJSONLayer(hbjsonPosition, `${basePath}demo.hbjson`);
   const tile3dLayerPromise = create3DTilesLayer();
+  const maskLayerPromise = createMaskLayer(gisData);
 
   // Await all promises
   const layers = await Promise.all([
-    tile3dLayerPromise,
+    
+    
     hbjsonLayerPromise,
-    treeLayerPromise,
     buildingLayerPromise,
+    //tile3dLayerPromise,
     treePointsLayerPromise,
+    treeLayerPromise,
+    //maskLayerPromise,
     landCoverLayerPromise,
   ]);
 

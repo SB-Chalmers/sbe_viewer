@@ -1,6 +1,7 @@
 import { LightingEffect, AmbientLight, _SunLight as SunLight } from '@deck.gl/core';
 import { DEFAULT_SUNLIGHT_TIME } from './constants';
 
+
 const sky = new AmbientLight({
     color: [200, 206, 235],
     intensity: 2

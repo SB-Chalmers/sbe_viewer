@@ -1,5 +1,7 @@
 import { GeoJsonLayer } from '@deck.gl/layers';
 import { ScenegraphLayer } from '@deck.gl/mesh-layers';
+import { getColorFromValue } from '../colormapHelpers';
+import {_TerrainExtension as TerrainExtension} from '@deck.gl/extensions';
 const basePath = process.env.REACT_APP_BASE_PATH || '';
 export const createTreeLayer = async (data: any, id: string = 'tree-layer') => {
   console.log('Creating Tree Layer with data:', data);
@@ -39,6 +41,7 @@ export const createTreeLayer = async (data: any, id: string = 'tree-layer') => {
 
       // Use realistic PBR lighting
       _lighting: 'pbr',
+      //extensions: [new TerrainExtension()],
       _shadow: false,
       shadowEnabled: false,
       animation: false,
@@ -60,6 +63,7 @@ export const createTreePointsLayer = (data: any, id: string = 'tree-points-layer
         getPointRadius: 4,
         getFillColor: [0, 200, 0, 200],
         shadowEnabled: false,
+        _shadows: false,
         pickable: false,
         getLineWidth: 1,
     });

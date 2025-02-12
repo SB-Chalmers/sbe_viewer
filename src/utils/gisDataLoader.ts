@@ -1,5 +1,6 @@
 const basePath = process.env.REACT_APP_BASE_PATH || '';
-
+console.log('Base path:', basePath);
+console.log('geojson path:', `${basePath}sample-data.geojson`);
 
 export const loadGisData = async () => {
     try {
