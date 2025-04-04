@@ -101,4 +101,4 @@ The long-term roadmap is to support the following features
 Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the GPL License.
